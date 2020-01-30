@@ -1,0 +1,14 @@
+{
+    "personas" : [
+        { "nombre" : "jesus", "apodo" : "cristo"},
+        { "nombre" : "judas", "apodo": "traidor"},
+        { "nombre": "denis", "apodo" : "jerry"},
+        { "nombre": "kike", "apodo": "gerardo"},
+        { "nombre": "walter", "apodo": "waro"}
+    ]
+
+
+
+
+
+}
