@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="fondo">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,11 +9,11 @@
     <link rel="icon" type="image/png" href="/img/icon.png" />
     <script>
         function abrir(url) {
-        open(url,'','top=300,left=300,width=300,height=300') ;
+        open(url,'','top=300,left=300,width=400,height=500') ;
         }
         </script>
 </head>
-<body>
+<body >
    <a href="#"><img class =  "avatar" src="img/Logo.png" alt="Logo de Netflix"></a> 
 <div class="login-box">
 
@@ -23,10 +23,10 @@
     <label>Inicia sesión para comenzar a ver o reiniciar <br>tu membresía.</label>
     <br><br>
 
-<input type="text" placeholder="E-mail o Numero de Telefono"> 
+<input type="email" placeholder="E-mail o Numero de Telefono" required minlength="10" maxlength="20" autofocus> 
 <br><br> 
 
-<input type="password" placeholder="Contraseña"> 
+<input type="password" placeholder="Contraseña" required minlength="4" maxlength="10"> 
 <br><br><br>
 
 <input type="submit" value="Iniciar Sesion">
@@ -36,13 +36,17 @@
 
 <br>
 
-<a href="javascript:abrir('pagina.html')"><img src="/img/facebook-icon.jpg"> Iniciar sesion con Facebook </a>
+<a href="javascript:abrir('/Facebook/homepage.html')"><img src="/img/favicon.jpg"> Iniciar sesion con Facebook </a>
 
-<p>¿Primera vez en Netflix ?<a href="#" style="font-size: large;" style="font-weight: bold;">&nbsp Suscribete ya</a> </p>
+<p style="color: darkgray;">¿Primera vez en Netflix ?<a href="https://www.netflix.com/hn/" style="color: white;" >&nbsp; Suscribete ya</a> </p>
 <label style="font-size: 13px;">Esta página está protegida por Google reCAPTCHA </label><label style="font-size: 13px;">para comprobar que no eres un robot. <a href="#">Más info.</a></label>
 </form>
 
 
 </div>    
+<div class = "mitad">
+    <p>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;¿Preguntas? Llama al +1 (408) 514-5239 (USA)</p>
+    <p> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://help.netflix.com/legal/termsofuse">Términos de las tarjetas de regalo </a></a>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<a href="">Términos de uso </a>  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;<a href="https://help.netflix.com/legal/privacy">Declaración de privacidad</a> </p>
+</div>
 </body>
 </html>
