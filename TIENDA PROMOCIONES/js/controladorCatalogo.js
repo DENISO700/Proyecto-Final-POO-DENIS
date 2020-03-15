@@ -185,6 +185,12 @@ function Carrusel() {
 
 }
 
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
 //Funcion que carga los comentarios
 function Comentarios() {
     document.getElementById("comentarios").innerHTML = "";
@@ -205,4 +211,29 @@ function Comentarios() {
 </div> `
     }
 
+}
+
+//////////////////////////////////////////////////////////
+
+
+function generarSelect() {
+
+
+    for (let i = 0; i < categorias.length; i++) {
+
+
+
+        document.getElementById("cat").innerHTML +=
+
+            `  <option value="${i}">${categorias[i].nombreCategoria}</option>`;
+
+
+    }
+}
+
+
+//guardar Indices para acceder a los datos correxctos para la modal
+function guardarIndices(ic, ia) {
+    indiceCategoria = ic;
+    indiceAplicacion = ia;
 }
