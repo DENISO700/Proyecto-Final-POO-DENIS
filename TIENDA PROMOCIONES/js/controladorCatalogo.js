@@ -25,8 +25,6 @@ if (localStorage.getItem("categorias") == null) {
 
 if (localStorage.getItem("empresa") == null) {
 
-
-
     empresa = [
 
             {
@@ -72,13 +70,38 @@ if (localStorage.getItem("empresa") == null) {
                 vencimiento: "",
                 CCV: "",
                 plan: "",
+                sucursales: [
+
+                    {
+                        nombreSucursal: "",
+                        correo: "",
+                        telefono: "",
+                        pais: "",
+                        ciudad: "",
+                        redSocial: "",
+                        url: "",
+                        banner: "",
+                        direccion: "",
+                        latitud: "",
+                        longitud: "",
+
+                    }
+                ],
+
                 productos: [
 
                     {
-                        nombreCategoria: "Electrodomesticos",
+                        categoria: "Electrodomesticos",
+                        nombre: "",
                         precio: "$ 40.00",
+                        cantida: "",
                         descripcion: "Lorem ipsum dolor . . . ",
                         calificacion: 2,
+                        ubicacion: [{
+                            direccion: "",
+                            latitud: "",
+                            longitud: "",
+                        }],
                         imagenes: [
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
@@ -107,6 +130,49 @@ if (localStorage.getItem("empresa") == null) {
 
                     },
                 ],
+
+                promociones: [
+
+                    {
+                        categoria: "Electrodomesticos",
+                        nombre: "",
+                        precio: "$ 40.00",
+                        cantida: "",
+                        descripcion: "Lorem ipsum dolor . . . ",
+                        calificacion: 2,
+                        ubicacion: [{
+                            direccion: "",
+                            latitud: "",
+                            longitud: "",
+                        }],
+                        imagenes: [
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                        ],
+
+                        Comentarios: [
+
+                            {
+                                usuario: "Denis Ordoñez",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Darwin Rodas",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Isaac Ramirez",
+                                calificacion: 4,
+                                contenido: "Lorem ipsum dolor . . . "
+                            }
+
+                        ]
+                    }
+
+                ]
 
             },
 
