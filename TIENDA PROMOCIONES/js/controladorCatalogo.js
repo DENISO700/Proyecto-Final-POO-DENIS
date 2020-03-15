@@ -1,3 +1,145 @@
+var empresa, categorias;
+var localStorage = window.localStorage;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//Verifica si hay datos en el local storage JSON empresas
+
+if (localStorage.getItem("categorias") == null) {
+
+    categorias = [
+
+            "Electrodomesticos"
+
+
+        ],
+
+
+        localStorage.setItem("categorias", JSON.stringify(categorias));
+} else {
+    categorias = JSON.parse(localStorage.getItem('categorias'));
+}
+
+////////////////////////////////////////////////////////////////////////////
+//Verifica si hay datos en el local storage JSON empresas
+
+if (localStorage.getItem("empresa") == null) {
+
+
+
+    empresa = [
+
+            {
+                nombreEmpresa: "Edmundo S.A",
+                logo: "",
+                correo: "",
+                contraseña: "",
+                descripcion: "",
+                mision: "",
+                vision: "",
+                telefono: "",
+                pais: "",
+                ciudad: "",
+                redesSociales: [
+
+                    {
+                        nombreRed: "",
+                        url: "",
+                        banner: "",
+
+                    },
+                    {
+                        nombreRed: "",
+                        url: "",
+                        banner: "",
+
+                    },
+                    {
+                        nombreRed: "",
+                        url: "",
+                        banner: "",
+
+                    },
+
+                ],
+                direccion: "",
+                latitud: "",
+                longitud: "",
+
+                formaDePago: "",
+                nombrePropietario: "",
+                numeroTarjeta: "",
+                vencimiento: "",
+                CCV: "",
+                plan: "",
+                productos: [
+
+                    {
+                        nombreCategoria: "Electrodomesticos",
+                        precio: "$ 40.00",
+                        descripcion: "Lorem ipsum dolor . . . ",
+                        calificacion: 2,
+                        imagenes: [
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                        ],
+
+                        Comentarios: [
+
+                            {
+                                usuario: "Denis Ordoñez",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Darwin Rodas",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Isaac Ramirez",
+                                calificacion: 4,
+                                contenido: "Lorem ipsum dolor . . . "
+                            }
+
+                        ]
+
+                    },
+                ],
+
+            },
+
+
+        ],
+
+
+        localStorage.setItem("empresa", JSON.stringify(empresa));
+} else {
+    empresa = JSON.parse(localStorage.getItem('empresa'));
+}
+
+
+
+////////////////////////////////////////////////////////////////////
+//Funcion llenar Group Button
+function generarButtons() {
+
+
+    for (let i = 0; i < categorias.length; i++) {
+
+
+
+        document.getElementById("cat").innerHTML +=
+
+            `  <option value="${i}">${categorias[i].nombreCategoria}</option>`;
+
+
+    }
+}
+
+
+
 ///////////FUNCIONES DE CATALOGO/////////////////////////////////////
 
 function Catalogo() {
@@ -30,80 +172,7 @@ function Catalogo() {
 
     }
 
-    for (let c = 0; c < 3; c++) {
 
-        document.getElementById("catalogo").innerHTML +=
-            `
-            <div class="col-lg-3 col-md-6 special-grid mobiliario">
-            <div class="products-single fix">
-                <div class="box-img-hover">
-                    <img src="images/gallery-img-04.jpg" class="img-fluid" alt="Image">
-                    <div class="mask-icon">
-                        <ul>
-                        <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                            <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        `;
-
-
-    }
-
-
-    for (let c = 0; c < 3; c++) {
-
-        document.getElementById("catalogo").innerHTML +=
-            `
-            <div class="col-lg-3 col-md-6 special-grid vestimenta">
-                    <div class="products-single fix">
-                        <div class="box-img-hover">
-                            <img src="images/gallery-img-08.jpg" class="img-fluid" alt="Image">
-                            <div class="mask-icon">
-                                <ul>
-                                <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                                    <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        `;
-
-
-    }
-
-    for (let c = 0; c < 3; c++) {
-
-        document.getElementById("catalogo").innerHTML +=
-            `
-            <div class="col-lg-3 col-md-6 special-grid anime">
-            <div class="products-single fix">
-                <div class="box-img-hover">
-                    <img src="images/gallery-img-10.jpg" class="img-fluid" alt="Image">
-                    <div class="mask-icon">
-                        <ul>
-                        <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                            <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        `;
-
-
-    }
 
 }
 
