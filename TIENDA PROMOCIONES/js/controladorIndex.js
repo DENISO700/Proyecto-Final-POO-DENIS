@@ -1,3 +1,70 @@
+//JSON de iNDEX
+
+
+var planes;
+var localStorage = window.localStorage;
+
+
+//Verifica si hay datos en el local storage 
+
+if (localStorage.getItem("planes") == null) {
+    planes = [
+
+
+        {
+            nombrePlan: "Gratis",
+            precio: "$ 0.00",
+            promos: 10,
+            almacenamiento: 2,
+            soporte: true,
+            centroDeAyuda: false,
+            duracion: 1,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "Profesional",
+            precio: "$ 15.00",
+
+
+            promos: 20,
+            almacenamiento: 10,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 12,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "ULTIMATE",
+            precio: "$ 29.00",
+            promos: 30,
+            almacenamiento: 20,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 18,
+            panpallaPrincipal: true
+
+
+        },
+
+
+    ];
+    localStorage.setItem("planes", JSON.stringify(planes));
+} else {
+    planes = JSON.parse(localStorage.getItem('planes'));
+}
+
+
+
+
+
 ////////FUNCIONES DEL INDEX/////////////////////////
 //Funcuon genera Categorias
 
@@ -35,31 +102,30 @@ function Planes() {
     document.getElementById("planes").innerHTML = "";
 
 
-    for (let k = 0; k < 3; k++) {
+    for (let k = 0; k < planes.length; k++) {
 
 
         document.getElementById("planes").innerHTML += `
     
-    <div class="card mb-4 shadow-sm ">
-    <div class="card-h">
-        <p class="titulo ">GRATIS</p>
-    </div>
-    <div class="card-b">
-        <p class="precio">$0 </p>
-        <ul class="beneficios mt-1 mb-1">
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp; 10 espacios para promos.</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;2 GB de Almacenamiento</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;Soporte por Email</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;Acceso al centro de ayuda</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;10 espacios para promos.</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;2 GB de Almacenamiento</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;Soporte por Email</li>
-            <li><i class="fa fa-lightbulb-o"></i> &nbsp;Acceso al centro de ayuda</li>
-        </ul>
-        <a class=" ir btn hvr-hover" href="/loginEmpresa.html">INICIAR</a>
-    </div>
+        <div class="card mb-4 shadow-sm ">
+        <div class="card-h">
+            <p class="titulo ">${planes[k].nombrePlan}</p>
+        </div>
+        <div class="card-b">
+            <p class="precio">${planes[k].precio} </p>
+            <ul class="beneficios mt-1 mb-1">
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;${planes[k].promos} espacios para promos.</li>
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;${planes[k].almacenamiento} GB de Almacenamiento</li>
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;Soporte por Email</li>
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;Acceso al centro de ayuda</li>
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;${planes[k].duracion} Mes de duracion.</li>
+                <li><i class="fa fa-lightbulb-o"></i> &nbsp;Banners en pantalla principal</li>
+               
+            </ul>
+            <a class=" ir btn hvr-hover" href="/loginEmpresa.html">INICIAR</a>
+        </div>
 
-</div>
+    </div>
 `;
 
 

@@ -2026,3 +2026,18 @@ section.pricing {
     font-weight: bold;
     font-size: 35px;
 }
+
+
+/*SLKIDER NUEVO*/
+
+.carrusel {
+    background: linear-gradient(to right, red, #33AEFF);
+}
+
+.bienvenida {
+    color: white;
+    font-weight: bold;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 30px;
+}
