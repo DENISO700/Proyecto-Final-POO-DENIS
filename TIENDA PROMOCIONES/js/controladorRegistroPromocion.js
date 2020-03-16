@@ -285,21 +285,29 @@ if (localStorage.getItem("empresa") == null) {
 
                     {
 
-                        nombre: "",
+                        nombre: "Figura de Anime",
                         precio: "$ 30.00",
-                        porcentaje: "",
+                        porcentaje: "0.5",
                         descripcion: "Lorem ipsum dolor . . . ",
                         inicio: "12/12/2020",
                         final: "11/11/2021",
 
                         sucursales: [
 
-
                             {
-                                direccion: "",
-                                latitud: "",
-                                longitud: "",
-                            }
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: "45",
+                                longitud: "54",
+
+                            },
 
                         ],
 
@@ -389,12 +397,12 @@ function Sucursales() {
 
     document.getElementById("sucursales").innerHTML = ``;
 
-    for (let s = 0; s < empresas[0].sucursales.length; s++) {
+    for (var s = 0; s < empresas[0].sucursales.length; s++) {
         document.getElementById("sucursales").innerHTML += `
     
     <div>
-      <input id="${empresas[0].sucursales[s].nombreSucursal}"  type="checkbox" value="${empresas[0].sucursales[s]}">
-      <label for="${empresas[0].sucursales[s].nombreSucursal}" style="background-color: white;">${empresas[0].sucursales[s].nombreSucursal}</label>
+      <input id="Sucursal${s}"  type="checkbox" value="${empresas[0].sucursales[s]}">
+      <label for="Sucursal${s}" style="background-color: white;">${empresas[0].sucursales[s].nombreSucursal}</label>
     </div>
     `;
 
@@ -407,6 +415,7 @@ Sucursales();
 /////////////////////////////////
 
 function nuevaPromocion() {
+
 
 
     var indice = document.getElementById("productos").value;
@@ -427,10 +436,7 @@ function nuevaPromocion() {
 
 
 
-        sucursales: [
-
-
-        ],
+        sucursales: [],
 
         imagenes: [
             empresas[0].productos[document.getElementById("productos").value].imagenes[0],

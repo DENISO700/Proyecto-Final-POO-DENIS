@@ -1,7 +1,62 @@
-var categorias;
+var empresa, categorias, planes;
 var localStorage = window.localStorage;
 
 
+if (localStorage.getItem("planes") == null) {
+    planes = [
+
+
+        {
+            nombrePlan: "Gratis",
+            precio: "$ 0.00",
+            promos: 10,
+            almacenamiento: 2,
+            soporte: true,
+            centroDeAyuda: false,
+            duracion: 1,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "Profesional",
+            precio: "$ 15.00",
+
+
+            promos: 20,
+            almacenamiento: 10,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 12,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "ULTIMATE",
+            precio: "$ 29.00",
+            promos: 30,
+            almacenamiento: 20,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 18,
+            panpallaPrincipal: true
+
+
+        },
+
+
+    ];
+    localStorage.setItem("planes", JSON.stringify(planes));
+} else {
+    planes = JSON.parse(localStorage.getItem('planes'));
+}
+///////////////////////////////////////////////////////////////////////////////
+//Verifica si hay datos en el local storage JSON empresas
 
 if (localStorage.getItem("categorias") == null) {
 
@@ -21,9 +76,8 @@ if (localStorage.getItem("categorias") == null) {
     categorias = JSON.parse(localStorage.getItem('categorias'));
 }
 
-
-
-///////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+//Verifica si hay datos en el local storage JSON empresas
 
 if (localStorage.getItem("empresa") == null) {
 
@@ -351,54 +405,48 @@ if (localStorage.getItem("empresa") == null) {
 } else {
     empresas = JSON.parse(localStorage.getItem('empresas'));
 }
-
-//////////////////////////////////////////////////////////////
-
-
-function cargarCategorias() {
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    for (let i = 0; i < categorias.length; i++) {
+//Funcion Caegar Empresas
 
+function tablaEmpresas() {
 
+    document.getElementById("cuerpo").innerHTML = ``;
 
-        document.getElementById("categorias").innerHTML +=
+    for (let c = 0; c < 9; c++) {
 
-            `  <option value="${categorias[i]}">${categorias[i]}</option>`;
-
-
+        document.getElementById("cuerpo").innerHTML +=
+            `
+    
+            <tr>
+            <td class="thumbnail-img">
+                <a href="#">
+                    <img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
+                </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+            Lorem ipsum dolor sit amet
+        </a>
+            </td>
+            <td class="price-pr">
+                <p>$ 30.0</p>
+            </td>
+            <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+            <td class="total-pr">
+                <p>$ 80.0</p>
+            </td>
+            <td class="remove-pr">
+                <a href="#">
+                    <i class="fas fa-times"></i>
+                </a>
+            </td>
+        </tr>
+    
+    
+    `;
     }
 
-}
-
-cargarCategorias();
-
-
-
-/////////////////////////////////
-
-function nuevoProducto() {
-
-    let producto = {
-        categoria: document.getElementById('categorias').value,
-        nombre: document.getElementById('nombreProducto').value,
-        precio: document.getElementById('precioproducto').value,
-        cantida: document.getElementById('cantidad').value,
-        descripcion: document.getElementById('descripcion').value,
-        ubicacion: [{
-            direccion: document.getElementById('direccion').value,
-            latitud: document.getElementById('latitud').value,
-            longitud: document.getElementById('longitud').value,
-        }],
-        imagenes: [
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
-        ],
-
-        Comentarios: []
-    };
-    empresas[0].productos.push(producto);
-    localStorage.setItem('empresas', JSON.stringify(empresas));
 
 }
