@@ -77,7 +77,10 @@
 
                     <div class="row">
                         <div class=" col-md-5 mb-3 mt-5">
-                            <input class="form-control" type="text" placeholder="Nombre del Producto" required>
+                            <select class="custom-select mt-2" id="productos" onchange="Precio();">
+                                <option selected>Nombre Producto</option>
+                              
+                              </select>
                         </div>
 
                         <div class="col-md-3 mb-3 mt-5">
@@ -90,11 +93,6 @@
                                 <img src="/images/log-placeholder.png" class="w-100 ">
                             </div>
                         </div>
-
-
-
-
-
 
                     </div>
                     <!-- Fin  -->
@@ -111,8 +109,19 @@
 
                         <div class="col-4 mt-3">
 
-                            <label for="customRange2">Porcentaje de Promocion</label><br>
-                            <input type="range" class="custom-range" min="10" max="100" id="customRange2">
+                            <select class="custom-select">
+                                <option selected>Porcentaje de Promocion</option>
+                                <option value="0.1"> 10 %</option>
+                                <option value="0.2"> 20 %</option>
+                                <option value="0.3"> 30 %</option>
+                                <option value="0.4"> 40 %</option>
+                                <option value="0.5"> 50 %</option>
+                                <option value="0.6"> 60 %</option>
+                                <option value="0.7"> 70 %</option>
+                                <option value="0.8"> 80 %</option>
+                                <option value="0.9"> 90 %</option>
+                                <option value="1.0"> 100 %</option>
+                              </select>
 
                         </div>
 
@@ -197,6 +206,7 @@
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
         <!-- ALL JS FILES -->
+        <script src="/js/controladorRegistroPromocion.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

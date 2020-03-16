@@ -94,15 +94,15 @@ if (localStorage.getItem("empresa") == null) {
 
                     {
                         categoria: "Electrodomesticos",
-                        nombre: "",
+                        nombre: "Figura de Anime",
                         precio: "$ 40.00",
-                        cantida: "",
+                        cantida: "24",
                         descripcion: "Lorem ipsum dolor . . . ",
                         calificacion: 2,
                         ubicacion: [{
-                            direccion: "",
-                            latitud: "",
-                            longitud: "",
+                            direccion: "Col. La Cañada",
+                            latitud: "25",
+                            longitud: "45",
                         }],
                         imagenes: [
                             "images/gallery-img-01.jpg",
@@ -196,24 +196,33 @@ if (localStorage.getItem("empresa") == null) {
 
 //////////////////////////////////////////////////////////////
 
-
-function cargarCategorias() {
-
-
-    for (let i = 0; i < categorias.length; i++) {
+//Funcion para cargar categorias
+function cargarProductos() {
 
 
+    for (let i = 0; i < empresas[0].productos.length; i++) {
 
-        document.getElementById("categorias").innerHTML +=
 
-            `  <option value="${categorias[i]}">${categorias[i]}</option>`;
+
+        document.getElementById("productos").innerHTML +=
+
+            `  <option value="${i}">${empresas[0].productos[i].nombre}</option>`;
 
 
     }
 
 }
 
-cargarCategorias();
+cargarProductos();
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Funcion Cargar Precio
+
+function Precio() {
+
+    document.getElementById("precioproducto").value = empresas[0].productos[document.getElementById("productos").value].precio;
+}
 
 
 
