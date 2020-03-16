@@ -88,10 +88,8 @@
                             <input type="text" id="precioproducto" class="form-control" placeholder="Precio">
                         </div>
 
-                        <div class="col-md-4 mb-3 ">
-                            <div class="col-md-12 ">
-                                <img src="/images/log-placeholder.png" class="w-100 ">
-                            </div>
+                        <div class="col-md-4 mb-3 " id="img">
+
                         </div>
 
                     </div>
@@ -158,19 +156,21 @@
                                 </div>
                                 <form class="needs-validation" novalidate>
                                     <hr class="mb-4">
-                                    <div class="d-block my-3">
-                                        <div class="custom-control custom-radio">
-                                            <input id="credit" name="paymentMethod" type="checkbox" class="custom-control-input">
-                                            <label class="custom-control-label" for="credit" style="background-color: white;">San Pedro Sula</label>
+                                    <div class="d-block my-3" id="sucursales">
+                                        <div>
+                                            <input id="credit" name="paymentMethod" type="checkbox" value="1">
+                                            <label for="credit" style="background-color: white;">San Pedro Sula</label>
                                         </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="debit" name="paymentMethod" type="checkbox" class="custom-control-input">
-                                            <label class="custom-control-label" for="debit" style="background-color: white;">Tegucigalpa</label>
+                                        <div>
+                                            <input id="debit" name="paymentMethod" type="checkbox" value="2">
+                                            <label for="debit" style="background-color: white;">Tegucigalpa</label>
                                         </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="paypal" name="paymentMethod" type="checkbox" class="custom-control-input">
-                                            <label class="custom-control-label" for="paypal" style="background-color: white;">Choluteca</label>
+                                        <div>
+                                            <input id="paypal" name="paymentMethod" type="checkbox" value="3">
+                                            <label for="paypal" style="background-color: white;">Choluteca</label>
                                         </div>
+
+
                                     </div>
 
 
