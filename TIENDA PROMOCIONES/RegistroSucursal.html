@@ -75,12 +75,12 @@
                     <!-- Datos Generales -->
                     <div class="row">
                         <div class=" col-md-5 mb-3">
-                            <input class="form-control" type="text" placeholder="Nombre de la Sucursal" required>
+                            <input class="form-control" type="text" placeholder="Nombre de la Sucursal" required id="nombreSucursal">
                         </div>
 
                         <div class="col-md-7 mb-3">
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Correo Electronico" required>
+                                <input type="email" class="form-control" placeholder="Correo Electronico" required id="correoSucursal">
                             </div>
                         </div>
                     </div>
@@ -93,10 +93,10 @@
                     <!-- Contacto -->
                     <div class="row">
                         <div class=" col-md-4  mb-3">
-                            <input type="text" class="form-control" placeholder="Numero Telefonico" required>
+                            <input type="text" class="form-control" placeholder="Numero Telefonico" required id="telefono">
                         </div>
                         <div class="col-md-4 mb-3 mt-3">
-                            <select name="contry" class="custom-select  w-100" required>
+                            <select name="contry" class="custom-select  w-100" required id="pais">
                                       <option value="">Pais</option>
                                       <option value="Honduras">Honduras</option>
                                       <option value="Guatemala">Guatemala</option>
@@ -107,7 +107,7 @@
                                     </select>
                         </div>
                         <div class="col-md-4 mt-3 mb-3">
-                            <select class="custom-select  w-100" required>
+                            <select class="custom-select  w-100" required id="ciudad">
                                         <option >Ciudad</option>
                                         <option value="Tegusigalpa">Tegucigalpa</option>
                                       </select>
@@ -124,7 +124,7 @@
 
 
                         <div class="col-md-2 mt-3">
-                            <select class="custom-select  ">
+                            <select class="custom-select  " id="red">
                                       <option value="">Red Social</option>
                                       <option value="facebook">Facebook</option>
                                       <option value="Instagram">Instagram</option>
@@ -134,11 +134,11 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url">
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control">
+                                <input type="file" class="custom-file-input form-control" id="logo">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
@@ -163,19 +163,19 @@
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Introduzca su Direccion" required>
+                            <input type="text" class="form-control" placeholder="Introduzca su Direccion" required id="direccionSucursal">
 
                         </div>
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Latitud" required>
+                            <input type="text" class="form-control" placeholder="Latitud" required id="latitud">
 
                         </div>
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Longitud" required>
+                            <input type="text" class="form-control" placeholder="Longitud" required id="longitud">
 
                         </div>
 
@@ -188,7 +188,7 @@
 
                     <div class="row">
                         <div class="col-md-4 mx-auto">
-                            <input type="submit" value="Agregar">
+                            <button type="button" class="btn btn-danger" onclick="nuevaSucursal();">Agregar</button>
 
                         </div>
 
@@ -202,10 +202,20 @@
         <!-- Fin Formulario Sucursal-->
 
 
+        <div class="row">
+            <div class="col-md-4 mx-auto bg-success">
+                CopyRigth 2020
+
+            </div>
+
+        </div>
+
+
 
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
         <!-- ALL JS FILES -->
+        <script src="/js/controladorRegistroSucursal.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

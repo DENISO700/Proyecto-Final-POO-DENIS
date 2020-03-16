@@ -9,7 +9,10 @@ if (localStorage.getItem("categorias") == null) {
 
     categorias = [
 
-            "Electrodomesticos"
+            "Electronicos",
+            "Anime",
+            "Mobiliario",
+            "Vestimenta",
 
 
         ],
@@ -196,14 +199,14 @@ function generarButtons() {
 
 
 
-        document.getElementById("cat").innerHTML +=
+        document.getElementById("filtro").innerHTML +=
 
-            `  <option value="${i}">${categorias[i].nombreCategoria}</option>`;
+            `  <button data-filter=".${categorias[i]}">${categorias[i]}</button>`;
 
 
     }
 }
-
+generarButtons();
 
 
 ///////////FUNCIONES DE CATALOGO/////////////////////////////////////
@@ -216,7 +219,7 @@ function Catalogo() {
 
         document.getElementById("catalogo").innerHTML +=
             `
-        <div class="col-lg-3 col-md-6 special-grid electronicos">
+        <div class="col-lg-3 col-md-6 special-grid Electronicos">
         <div class="products-single fix">
             <div class="box-img-hover">
                 <img src="images/gallery-img-01.jpg" class="img-fluid w-100" >

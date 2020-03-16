@@ -76,6 +76,7 @@
         </div>
     </div>
     <!-- FIN MARCADOR-->
+
     <!-- Formulario -->
     <div class="container contenedor-form-empresa">
 
@@ -93,11 +94,11 @@
                     <!-- Datos Generales -->
                     <div class="row">
                         <div class=" col-md-5 mb-3">
-                            <input class="form-control" type="text" placeholder="Nombre de la Empresa" required>
+                            <input class="form-control" type="text" placeholder="Nombre de la Empresa" required id="nombre">
                         </div>
                         <div class="col-md-5 mb-3 ">
                             <div class="custom-file ">
-                                <input type="file" class="custom-file-input form-control" required>
+                                <input type="file" class="custom-file-input form-control" required id="logo">
                                 <label class="custom-file-label mt-3">Seleccione el Logo de su Empresa</label>
                             </div>
 
@@ -113,13 +114,13 @@
                     <div class="row">
                         <div class="col-md-7 mb-3">
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Correo Electronico" required>
+                                <input type="email" class="form-control" placeholder="Correo Electronico" required id="correo">
                             </div>
                         </div>
                         <div class="col-md-5 mb-3">
                             <div class="mb-3">
                                 <div style="display: flex">
-                                    <input type="password" class="form-control" placeholder="Contraseña" required><span id="mopasword" onclick="pasword(false)"><i class="iconopas fas fa-eye"></i></span></div>
+                                    <input type="password" class="form-control" placeholder="Contraseña" required><span id="contraseña"><i class="iconopas fas fa-eye"></i></span></div>
 
                             </div>
                         </div>
@@ -133,7 +134,7 @@
                     <!-- Descripcion -->
                     <div class="row">
                         <div class=" mx-auto mb-3">
-                            <textarea class="m-auto descripcion" rows="5" cols="100" placeholder="Ingrese su Descripcion" required></textarea>
+                            <textarea class="m-auto descripcion" rows="5" cols="100" placeholder="Ingrese su Descripcion" required id="descripcion"></textarea>
                         </div>
                     </div>
                     <!-- Fin  -->
@@ -146,12 +147,12 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="mb-3">
-                                <input type="text" class="form-control" style="height: 100px;" placeholder="Mision" required>
+                                <input type="text" class="form-control" style="height: 100px;" placeholder="Mision" required id="mision">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="mb-3">
-                                <input type="text" class="form-control" style="height: 100px;" placeholder="Vision" required>
+                                <input type="text" class="form-control" style="height: 100px;" placeholder="Vision" required id="vision">
                             </div>
                         </div>
 
@@ -165,10 +166,10 @@
                     <!-- Contacto -->
                     <div class="row">
                         <div class=" col-md-4  mb-3">
-                            <input type="text" class="form-control" placeholder="Numero Telefonico" required>
+                            <input type="text" class="form-control" placeholder="Numero Telefonico" required id="telefono">
                         </div>
                         <div class="col-md-4 mb-3 mt-3">
-                            <select name="contry" class="custom-select  w-100" required>
+                            <select class="custom-select  w-100" required id="pais">
                                 <option value="">Pais</option>
                                 <option value="Honduras">Honduras</option>
                                 <option value="Guatemala">Guatemala</option>
@@ -179,9 +180,9 @@
                               </select>
                         </div>
                         <div class="col-md-4 mt-3 mb-3">
-                            <select class="custom-select  w-100" required>
+                            <select class="custom-select  w-100" required id="ciudad">
                                   <option >Ciudad</option>
-                                  <option value="Tegusigalpa">Tegucigalpa</option>
+                                  <option value="Tegucigalpa">Tegucigalpa</option>
                                 </select>
                         </div>
                     </div>
@@ -196,7 +197,7 @@
 
 
                         <div class="col-md-2 mt-3">
-                            <select class="custom-select  ">
+                            <select class="custom-select " id="red1">
                                 <option value="">Red Social</option>
                                 <option value="facebook">Facebook</option>
                                 <option value="Instagram">Instagram</option>
@@ -206,11 +207,11 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url1">
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control">
+                                <input type="file" class="custom-file-input form-control" id="logo1">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
@@ -228,7 +229,7 @@
 
 
                         <div class="col-md-2 mt-3">
-                            <select class="custom-select  ">
+                            <select class="custom-select " id="red2">
                                   <option value="">Red Social</option>
                                   <option value="facebook">Facebook</option>
                                   <option value="Instagram">Instagram</option>
@@ -238,11 +239,11 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url2">
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control">
+                                <input type="file" class="custom-file-input form-control" id="logo2">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
@@ -260,7 +261,7 @@
 
 
                         <div class="col-md-2 mt-3">
-                            <select class="custom-select  ">
+                            <select class="custom-select " id="red3">
                                 <option value="">Red Social</option>
                                 <option value="facebook">Facebook</option>
                                 <option value="Instagram">Instagram</option>
@@ -270,11 +271,11 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url3">
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control">
+                                <input type="file" class="custom-file-input form-control" id="logo3">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
@@ -298,19 +299,19 @@
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Introduzca su Direccion" required>
+                            <input type="text" class="form-control" placeholder="Introduzca su Direccion" required id="direccion">
 
                         </div>
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Latitud" required>
+                            <input type="text" class="form-control" placeholder="Latitud" required id="latitud">
 
                         </div>
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Longitud" required>
+                            <input type="text" class="form-control" placeholder="Longitud" required id="longitud">
 
                         </div>
 
@@ -333,41 +334,35 @@
                                 </div>
                                 <form class="needs-validation" novalidate>
                                     <hr class="mb-4">
-                                    <div class="d-block my-3">
-                                        <div class="custom-control custom-radio">
-                                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                            <label class="custom-control-label" for="credit" style="background-color: white;">Tarjeta de Credito</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="debit" style="background-color: white;">Tarjeta de Debito</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                            <label class="custom-control-label" for="paypal" style="background-color: white;">Paypal</label>
-                                        </div>
-                                    </div>
+
+                                    <select class="custom-select  w-100" required id="formaPago">
+                                        <option value="">Forma de Pago</option>
+                                        <option value="Credito">Tarjeta de Credito</option>
+                                        <option value="Debito">Tarjeta de Debito</option>
+                                        
+                                      </select>
+
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
 
-                                            <input type="text" class="form-control" id="cc-name" placeholder="Nombre de Propietario" required> <small class="text-muted">Full name as displayed on card</small>
+                                            <input type="text" class="form-control" placeholder="Nombre de Propietario" required id="propietario">
 
                                         </div>
                                         <div class="col-md-6 mb-3">
 
-                                            <input type="text" class="form-control" id="cc-number" placeholder="Numero de tarjeta" required>
+                                            <input type="text" class="form-control" placeholder="Numero de tarjeta" required id="numeroTarjeta">
 
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-3 mb-3">
 
-                                            <input type="text" class="form-control" id="cc-expiration" placeholder="Vencimiento" required>
+                                            <input type="text" class="form-control" placeholder="Vencimiento" required id="Vencimiento">
 
                                         </div>
                                         <div class="col-md-3 mb-3">
 
-                                            <input type="text" class="form-control" id="cc-cvv" placeholder="CVV" required>
+                                            <input type="text" class="form-control" id="CCV" placeholder="CVV" required>
 
                                         </div>
                                         <div class="col-md-6 mb-3">
@@ -391,19 +386,11 @@
                                         <div class="title-left">
                                             <h3>Plan </h3>
                                         </div>
-                                        <div class="mb-4">
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
-                                                <label class="custom-control-label" for="shippingOption1" style="background-color: white;">Gratis</label> <span class="float-right font-weight-bold" style="color: black;">Gratis</span> </div>
-
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                                <label class="custom-control-label" for="shippingOption2" style="background-color: white;">Profesional</label> <span class="float-right font-weight-bold" style="color: black;">$15.00</span> </div>
-
-                                            <div class="custom-control custom-radio">
-                                                <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
-                                                <label class="custom-control-label" for="shippingOption3" style="background-color: white;">Ultimate</label> <span class="float-right font-weight-bold" style="color: black;">$29.00</span> </div>
-                                        </div>
+                                        <select class="custom-select  w-100 mb-5" required id="plan">
+                                            <option value="">Plan</option>
+                                         
+                                       
+                                          </select>
                                     </div>
                                 </div>
 
@@ -422,7 +409,7 @@
 
                     <div class="row">
                         <div class="col-md-4 mx-auto">
-                            <input type="submit" value="Registrarse">
+                            <button type="button" class="btn btn-danger" onclick="nuevaEmpresa();">Registrarse</button>
 
                         </div>
 
@@ -439,6 +426,7 @@
 
 
         <!-- ALL JS FILES -->
+        <script src="/js/controladorRegistroEmpresa.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
