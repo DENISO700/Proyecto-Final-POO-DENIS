@@ -393,7 +393,7 @@ function Sucursales() {
         document.getElementById("sucursales").innerHTML += `
     
     <div>
-      <input id="${empresas[0].sucursales[s].nombreSucursal}"  type="checkbox" value="1">
+      <input id="${empresas[0].sucursales[s].nombreSucursal}"  type="checkbox" value="${empresas[0].sucursales[s]}">
       <label for="${empresas[0].sucursales[s].nombreSucursal}" style="background-color: white;">${empresas[0].sucursales[s].nombreSucursal}</label>
     </div>
     `;
@@ -423,46 +423,24 @@ function nuevaPromocion() {
         porcentaje: promo,
         descripcion: empresas[0].productos[indice].descripcion,
         inicio: document.getElementById("fechainicio").value,
-        final: document.getElementById("fechafinal").value,
+        final: document.getElementById("fechalimite").value,
+
+
 
         sucursales: [
 
 
-            {
-                direccion: "",
-                latitud: "",
-                longitud: "",
-            }
-
         ],
 
         imagenes: [
-            "images/gallery-img-01.jpg",
-            "images/gallery-img-01.jpg",
-            "images/gallery-img-01.jpg",
+            empresas[0].productos[document.getElementById("productos").value].imagenes[0],
+            empresas[0].productos[document.getElementById("productos").value].imagenes[1],
+            empresas[0].productos[document.getElementById("productos").value].imagenes[2],
         ],
 
-        Comentarios: [
-
-            {
-                usuario: "Denis Ordoñez",
-                calificacion: 3,
-                contenido: "Lorem ipsum dolor . . . "
-            },
-            {
-                usuario: "Darwin Rodas",
-                calificacion: 3,
-                contenido: "Lorem ipsum dolor . . . "
-            },
-            {
-                usuario: "Isaac Ramirez",
-                calificacion: 4,
-                contenido: "Lorem ipsum dolor . . . "
-            }
-
-        ]
+        Comentarios: []
     };
-    empresas[0].productos.push(producto);
+    empresas[0].promociones.push(promocion);
     localStorage.setItem('empresas', JSON.stringify(empresas));
 
 }
