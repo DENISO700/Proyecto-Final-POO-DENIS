@@ -408,24 +408,59 @@ Sucursales();
 
 function nuevaPromocion() {
 
-    let producto = {
-        categoria: document.getElementById('categorias').value,
-        nombre: document.getElementById('nombreProducto').value,
-        precio: document.getElementById('precioproducto').value,
-        cantida: document.getElementById('cantidad').value,
-        descripcion: document.getElementById('descripcion').value,
-        ubicacion: [{
-            direccion: document.getElementById('direccion').value,
-            latitud: document.getElementById('latitud').value,
-            longitud: document.getElementById('longitud').value,
-        }],
-        imagenes: [
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
+
+    var indice = document.getElementById("productos").value;
+    var precio = document.getElementById("precioproducto").value;
+    var promo = document.getElementById("promo").value;
+
+    var descuento = precio * promo;
+
+    let promocion = {
+
+
+        nombre: empresas[0].productos[indice].nombre,
+        precio: empresas[0].productos[indice].precio,
+        porcentaje: promo,
+        descripcion: empresas[0].productos[indice].descripcion,
+        inicio: document.getElementById("fechainicio").value,
+        final: document.getElementById("fechafinal").value,
+
+        sucursales: [
+
+
+            {
+                direccion: "",
+                latitud: "",
+                longitud: "",
+            }
+
         ],
 
-        Comentarios: []
+        imagenes: [
+            "images/gallery-img-01.jpg",
+            "images/gallery-img-01.jpg",
+            "images/gallery-img-01.jpg",
+        ],
+
+        Comentarios: [
+
+            {
+                usuario: "Denis Ordoñez",
+                calificacion: 3,
+                contenido: "Lorem ipsum dolor . . . "
+            },
+            {
+                usuario: "Darwin Rodas",
+                calificacion: 3,
+                contenido: "Lorem ipsum dolor . . . "
+            },
+            {
+                usuario: "Isaac Ramirez",
+                calificacion: 4,
+                contenido: "Lorem ipsum dolor . . . "
+            }
+
+        ]
     };
     empresas[0].productos.push(producto);
     localStorage.setItem('empresas', JSON.stringify(empresas));
