@@ -1,62 +1,7 @@
-var empresa, categorias, planes;
+var categorias, empresas;
 var localStorage = window.localStorage;
 
 
-if (localStorage.getItem("planes") == null) {
-    planes = [
-
-
-        {
-            nombrePlan: "Gratis",
-            precio: "$ 0.00",
-            promos: 10,
-            almacenamiento: 2,
-            soporte: true,
-            centroDeAyuda: false,
-            duracion: 1,
-            panpallaPrincipal: false,
-
-
-
-        },
-
-        {
-            nombrePlan: "Profesional",
-            precio: "$ 15.00",
-
-
-            promos: 20,
-            almacenamiento: 10,
-            soporte: true,
-            centroDeAyuda: true,
-            duracion: 12,
-            panpallaPrincipal: false,
-
-
-
-        },
-
-        {
-            nombrePlan: "ULTIMATE",
-            precio: "$ 29.00",
-            promos: 30,
-            almacenamiento: 20,
-            soporte: true,
-            centroDeAyuda: true,
-            duracion: 18,
-            panpallaPrincipal: true
-
-
-        },
-
-
-    ];
-    localStorage.setItem("planes", JSON.stringify(planes));
-} else {
-    planes = JSON.parse(localStorage.getItem('planes'));
-}
-///////////////////////////////////////////////////////////////////////////////
-//Verifica si hay datos en el local storage JSON empresas
 
 if (localStorage.getItem("categorias") == null) {
 
@@ -76,8 +21,8 @@ if (localStorage.getItem("categorias") == null) {
     categorias = JSON.parse(localStorage.getItem('categorias'));
 }
 
-////////////////////////////////////////////////////////////////////////////
-//Verifica si hay datos en el local storage JSON empresas
+
+///////////////////////////////////////////////////////////////////////////
 
 if (localStorage.getItem("empresa") == null) {
 
@@ -248,71 +193,54 @@ if (localStorage.getItem("empresa") == null) {
 } else {
     empresas = JSON.parse(localStorage.getItem('empresas'));
 }
-////////////////////////////////////////////////////////////////////////////////////
 
-//FuncionCargarSelect
-
-function CargarPlanes() {
+//////////////////////////////////////////////////////////////
 
 
-    for (let i = 0; i < planes.length; i++) {
+function cargarCategorias() {
+
+
+    for (let i = 0; i < categorias.length; i++) {
 
 
 
-        document.getElementById("plan").innerHTML +=
+        document.getElementById("categorias").innerHTML +=
 
-            `  <option value="${planes[i].nombrePlan}">${planes[i].nombrePlan}</option>`;
+            `  <option value="${categorias[i]}">${categorias[i]}</option>`;
 
 
     }
 
 }
 
-CargarPlanes();
+cargarCategorias();
 
-///////////////////////////////////////////////////////////////
 
-function nuevaEmpresa() {
 
-    let empresa = {
+/////////////////////////////////
 
-        nombreEmpresa: document.getElementById('nombre').value,
-        logo: document.getElementById('logo').value,
-        correo: document.getElementById('correo').value,
-        contraseña: document.getElementById('contraseña').value,
+function nuevaPromocion() {
+
+    let producto = {
+        categoria: document.getElementById('categorias').value,
+        nombre: document.getElementById('nombreProducto').value,
+        precio: document.getElementById('precioproducto').value,
+        cantida: document.getElementById('cantidad').value,
         descripcion: document.getElementById('descripcion').value,
-        mision: document.getElementById('mision').value,
-        vision: document.getElementById('vision').value,
-        telefono: document.getElementById('telefono').value,
-        pais: document.getElementById('pais').value,
-        ciudad: document.getElementById('ciudad').value,
-        redesSociales: [{
-            nombreRed1: document.getElementById('red1').value,
-            url1: document.getElementById('url1').value,
-            banner1: document.getElementById('logo1').value,
-            nombreRed2: document.getElementById('red2').value,
-            url2: document.getElementById('url2').value,
-            banner2: document.getElementById('logo2').value,
-            nombreRed3: document.getElementById('red3').value,
-            url3: document.getElementById('url3').value,
-            banner3: document.getElementById('logo3').value,
+        ubicacion: [{
+            direccion: document.getElementById('direccion').value,
+            latitud: document.getElementById('latitud').value,
+            longitud: document.getElementById('longitud').value,
         }],
-        direccion: document.getElementById('direccion').value,
-        latitud: document.getElementById('latitud').value,
-        longitud: document.getElementById('longitud').value,
-        formaDePago: document.getElementById('formaPago').value,
-        nombrePropietario: document.getElementById('propietario').value,
-        numeroTarjeta: document.getElementById('numeroTarjeta').value,
-        vencimiento: document.getElementById('Vencimiento').value,
-        CCV: document.getElementById('CCV').value,
-        plan: document.getElementById('plan').value,
-        sucursales: [],
-        productos: [],
-        promociones: []
+        imagenes: [
+            document.getElementById('foto').value,
+            document.getElementById('foto').value,
+            document.getElementById('foto').value,
+        ],
+
+        Comentarios: []
     };
-    empresas.push(empresa);
+    empresas[0].productos.push(producto);
     localStorage.setItem('empresas', JSON.stringify(empresas));
 
 }
-
-///////////////////////////////////////////////////////////////////////////

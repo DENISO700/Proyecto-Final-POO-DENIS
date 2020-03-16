@@ -137,17 +137,24 @@ if (localStorage.getItem("empresa") == null) {
                 promociones: [
 
                     {
-                        categoria: "Electrodomesticos",
+
                         nombre: "",
                         precio: "$ 40.00",
-                        cantida: "",
+                        porcentaje: "",
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "",
-                            latitud: "",
-                            longitud: "",
-                        }],
+                        inicio: "",
+                        final: "",
+
+                        sucursales: [
+
+
+                            {
+                                direccion: "",
+                                latitud: "",
+                                longitud: "",
+                            }
+
+                        ],
                         imagenes: [
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
