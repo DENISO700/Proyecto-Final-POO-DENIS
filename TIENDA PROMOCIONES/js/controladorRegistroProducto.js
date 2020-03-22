@@ -371,7 +371,7 @@ function cargarCategorias() {
 
 }
 
-cargarCategorias();
+//cargarCategorias();
 
 
 

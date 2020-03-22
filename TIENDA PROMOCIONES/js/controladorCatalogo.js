@@ -1000,7 +1000,7 @@ function generarButtons() {
 
     }
 }
-generarButtons();
+//generarButtons();
 
 
 ///////////FUNCIONES DE CATALOGO/////////////////////////////////////
@@ -1122,7 +1122,7 @@ function Catalogo() {
 
 }
 
-Catalogo();
+//Catalogo();
 
 
 

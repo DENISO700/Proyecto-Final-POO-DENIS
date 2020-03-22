@@ -61,10 +61,6 @@ if (localStorage.getItem("planes") == null) {
     planes = JSON.parse(localStorage.getItem('planes'));
 }
 
-
-
-
-
 ////////FUNCIONES DEL INDEX/////////////////////////
 //Funcuon genera Categorias
 
@@ -89,7 +85,7 @@ function Categorias() {
 
 }
 
-Categorias();
+//Categorias();
 
 ////////////////////////////////////////////////////////
 
@@ -135,7 +131,7 @@ function Planes() {
 
 }
 
-Planes();
+//Planes();
 
 //////////////////////////////////////////////////////////////
 
@@ -174,6 +170,6 @@ function Slider() {
 
 }
 
-Slider();
+//Slider();
 
 //////////////////////////////////////////////////////////////////////

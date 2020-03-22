@@ -1,10 +1,84 @@
-//////////CONTROLADOR EMPRESAS FAVORITAS//////////////////////////
-
-var usuarios, empresas;
+var planes, empresa, categorias, usuarios;
 var localStorage = window.localStorage;
 
+//Verifica si hay datos en el local storage 
 
+if (localStorage.getItem("planes") == null) {
+    planes = [
+
+
+        {
+            nombrePlan: "Gratis",
+            precio: "$ 0.00",
+            promos: 10,
+            almacenamiento: 2,
+            soporte: true,
+            centroDeAyuda: false,
+            duracion: 1,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "Profesional",
+            precio: "$ 15.00",
+
+
+            promos: 20,
+            almacenamiento: 10,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 12,
+            panpallaPrincipal: false,
+
+
+
+        },
+
+        {
+            nombrePlan: "ULTIMATE",
+            precio: "$ 29.00",
+            promos: 30,
+            almacenamiento: 20,
+            soporte: true,
+            centroDeAyuda: true,
+            duracion: 18,
+            panpallaPrincipal: true
+
+
+        },
+
+
+    ];
+    localStorage.setItem("planes", JSON.stringify(planes));
+} else {
+    planes = JSON.parse(localStorage.getItem('planes'));
+}
+
+///////////////////////////////////////////////////////////////////////////////
 //Verifica si hay datos en el local storage JSON empresas
+
+if (localStorage.getItem("categorias") == null) {
+
+    categorias = [
+
+            "Electronicos",
+            "Anime",
+            "Mobiliario",
+            "Vestimenta",
+        ],
+
+
+        localStorage.setItem("categorias", JSON.stringify(categorias));
+} else {
+    categorias = JSON.parse(localStorage.getItem('categorias'));
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//Verifica si hay datos en el local storage JSON usuarios
 
 if (localStorage.getItem("usuarios") == null) {
 
@@ -24,7 +98,7 @@ if (localStorage.getItem("usuarios") == null) {
                         logo: "/images/LogosEmpresas/logo1.jpg",
                         correo: "damarissevilla2005@gmail.com",
                         contraseña: "cisco2019",
-                        descripcion: "Lorem ipsum dolor 123456 . . . ",
+                        descripcion: "Lorem ipsum dolor . . . ",
                         mision: "Lorem ipsum dolor . . .",
                         vision: "Lorem ipsum dolor . . .",
                         telefono: "22465413",
@@ -1130,43 +1204,58 @@ if (localStorage.getItem("empresa") == null) {
 
 
 //////////////////////////////////////////////////////////////
-//Funcion para generar laS Empresas Favoritas
 
-function EmpFav() {
+//FUNCION PARA GENERAR PDF
 
-    document.getElementById("EmpFav").innerHTML = ``;
+function getPDF() {
 
-    for (let c = 0; c < usuarios[0].empresasFavoritas.length; c++) {
+    var HTML_Width = $(".canvas_div_pdf").width();
+    var HTML_Height = $(".canvas_div_pdf").height();
+    var top_left_margin = 15;
+    var PDF_Width = HTML_Width;
+    var PDF_Height = (PDF_Width * 1);
+    var canvas_image_width = HTML_Width;
+    var canvas_image_height = HTML_Height;
 
-        document.getElementById("EmpFav").innerHTML +=
-            `
-            <tr>
-            <td class="thumbnail-img">
-                <a href="#">
-                    <img class="${usuarios[0].empresasFavoritas[c].logo}" alt="" />
-                </a>
-            </td>
-            <td class="name-pr">
-                <a href="#">
-                ${usuarios[0].empresasFavoritas[c].nombreEmpresa}
-        </a>
-            </td>
-            <td class="price-pr">
-                <p>${usuarios[0].empresasFavoritas[c].descripcion}</p>
-            </td>
-            <td class="quantity-box">
-            Tegucigalpa
-            </td>
+    var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
 
 
-        </tr>
-    
-    
-    `;
+    html2canvas($(".canvas_div_pdf")[0], {
+        allowTaint: true
+    }).then(function(canvas) {
+        canvas.getContext('2d');
+
+        var imgData = canvas.toDataURL("image/jpeg", 1.0);
+        var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+        pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
 
 
+        for (var i = 1; i <= totalPDFPages; i++) {
+            pdf.addPage(PDF_Width, PDF_Height);
+            pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i), canvas_image_width, canvas_image_height);
+        }
+
+        pdf.save("FichaPromocion.pdf");
+    });
+};
+
+////////////////////////////////////////////////////////////////////
+
+//FUNCIONES LOGIN USUARIO
+
+function Admin() {
+    var temp = document.getElementById('correo').value;
+    // var contra = document.getElementById("contraseña").value;
+
+    if (temp == "denis") {
+        location.href = 'SuperAdministrador.html';
+    } else {
+        location.href = 'my-account.html';
     }
-
 }
 
-//EmpFav();
+
+///////////////////////////////////////////////////////////////////////
+
+
+//FUNCIONES INDEX//////////////////////////////

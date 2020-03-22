@@ -24,7 +24,7 @@ function pedido() {
 
 }
 
-pedido();
+//pedido();
 
 
 
@@ -52,4 +52,4 @@ function envio() {
 
 }
 
-envio();
+//envio();
