@@ -1,4 +1,4 @@
-var planes, empresa, categorias, usuarios;
+var planes, empresas, categorias, usuarios;
 var localStorage = window.localStorage;
 
 //Verifica si hay datos en el local storage 
@@ -246,7 +246,7 @@ if (localStorage.getItem("usuarios") == null) {
 
 //////////////////////////////////////////////////////////////////////////
 
-if (localStorage.getItem("empresa") == null) {
+if (localStorage.getItem("empresas") == null) {
 
     empresas = [
 
@@ -1258,7 +1258,7 @@ function Admin() {
 
 ///////////////////////////////////////////////////////////////////
 
-////////FUNCIONES DEL INDEX/////////////////////////
+////////CONTROLADOR  DEL INDEX/////////////////////////
 
 //Funcuon genera Categorias
 
@@ -1825,6 +1825,8 @@ function empFav(l) {
 
 
 /////////////CONTROLADOR EMPRESAS FAVORITAS//////////////////////
+
+
 //Funcion para generar laS Empresas Favoritas
 
 function cargarEmpFav() {
@@ -2315,36 +2317,128 @@ function nuevaPromocion() {
 
 function tablaEmpresas() {
 
-    document.getElementById("cuerpo").innerHTML = ``;
+    document.getElementById("empresas").innerHTML = ``;
 
-    for (let c = 0; c < 9; c++) {
+    for (let c = 0; c < empresas.length; c++) {
 
-        document.getElementById("cuerpo").innerHTML +=
+        document.getElementById("empresas").innerHTML +=
             `
     
             <tr>
+
             <td class="thumbnail-img">
                 <a href="#">
-                    <img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
+                    <img class="${empresas[c].logo}" alt="" />
                 </a>
+            </td>
+
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].nombreEmpresa}
+        </a>
+            </td>
+
+            <td class="price-pr">
+                <p>${empresas[c].correo}</p>
+            </td>
+
+            <td class="quantity-box">
+                <input type="text" size="4" value="${empresas[c].contraseña}" min="0" step="1" class="c-input-text qty text">
+            </td>
+
+
+            <td class="total-pr">
+                <p>${empresas[c].descripcion}</p>
+            </td>
+
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].mision}
+        </a>
             </td>
             <td class="name-pr">
                 <a href="#">
-            Lorem ipsum dolor sit amet
+                ${empresas[c].vision}
         </a>
             </td>
-            <td class="price-pr">
-                <p>$ 30.0</p>
-            </td>
-            <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-            <td class="total-pr">
-                <p>$ 80.0</p>
-            </td>
-            <td class="remove-pr">
+            <td class="name-pr">
                 <a href="#">
-                    <i class="fas fa-times"></i>
-                </a>
+                ${empresas[c].telefono}
+        </a>
             </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].pais}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].ciudad}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].redesSociales[0].nombreRed1}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].redesSociales[0].nombreRed2}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].redesSociales[0].nombreRed3}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].direccion}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].latitud}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].longitud}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].formaDePago}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].nombrePropietario}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].numeroTarjeta}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].vencimiento}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].CCV}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${empresas[c].plan}
+        </a>
+            </td>
+
+
+
         </tr>
     
     
@@ -2354,10 +2448,184 @@ function tablaEmpresas() {
 
 }
 
+//Funcion Cargar Planes
+
+function tablaPlanes() {
+
+    document.getElementById("planes").innerHTML = ``;
+
+    for (let c = 0; c < planes.length; c++) {
+
+        document.getElementById("planes").innerHTML +=
+            `
+    
+            <tr>
+
+            <td class="">
+                <a href="#">
+                   ${planes[c].nombrePlan}
+                </a>
+            </td>
+
+            <td class="name-pr">
+                <a href="#">
+                ${planes[c].precio}
+        </a>
+            </td>
+
+            <td class="price-pr">
+                <p>${planes[c].promos}</p>
+            </td>
+
+            <td class="quantity-box">
+                <input type="text" size="4" value="${planes[c].almacenamiento}" min="0" step="1" class="c-input-text qty text">
+            </td>
+
+
+            <td class="total-pr">
+                <p>${planes[c].soporte}</p>
+            </td>
+
+            <td class="name-pr">
+                <a href="#">
+                ${planes[c].centroDeAyuda}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${planes[c].duracion}
+        </a>
+            </td>
+            <td class="name-pr">
+                <a href="#">
+                ${planes[c].panpallaPrincipal}
+        </a>
+            </td>
+         
+            <td >
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-outline-danger" onclick = "Editar(${c});">Editar  </button>
+            </div>
+            </td>
+
+            <td >
+            <div class="col-md-4 text-center">
+                <button type="button" class="btn btn-outline-danger" onclick = "eliminarPlan(${c});">Borrar  </button>
+            </div>
+            </td >
+
+
+
+        </tr>
+    
+    
+    `;
+    }
+
+
+
+
+}
+
+//Funcion Guardar Planes
+
+function guardarPlan() {
+
+
+    let plan = {
+
+
+        nombrePlan: document.getElementById("nombre").value,
+        precio: document.getElementById("precio").value,
+        promos: document.getElementById("promos").value,
+        almacenamiento: document.getElementById("almacenamiento").value,
+        soporte: document.getElementById("soporte").value,
+        centroDeAyuda: document.getElementById("ayuda").value,
+        duracion: document.getElementById("duracion").value,
+        panpallaPrincipal: document.getElementById("principal").value,
+
+
+
+
+    };
+    planes.push(plan);
+    localStorage.setItem('planes', JSON.stringify(planes));
+    $('#exampleModal').modal('hide');
+    alert("Plan añadido con exito");
+    tablaPlanes()
+
+}
+
+
+////FUNCION ELIMINAR PLAN
+
+function eliminarPlan(e) {
+
+    planes.splice(e, 1)
+    localStorage.setItem('planes', JSON.stringify(planes));
+    alert("Plan eliminado con exito");
+    tablaPlanes()
+}
+
+
+//FUNCION MOSTRAR DIALOGO EDITAR
+
+function Editar(r) {
+    $('#exampleModal2').modal('show');
+
+    document.getElementById("nombre2").value = planes[r].nombrePlan
+    document.getElementById("precio2").value = planes[r].precio
+    document.getElementById("promos2").value = planes[r].promos
+    document.getElementById("almacenamiento2").value = planes[r].almacenamiento
+    document.getElementById("soporte2").value = planes[r].soporte
+    document.getElementById("ayuda2").value = planes[r].centroDeAyuda
+    document.getElementById("duracion2").value = planes[r].duracion
+    document.getElementById("principal2").value = planes[r].panpallaPrincipal
+
+    document.getElementById("botones").innerHTML =
+        `
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+    <button type="button" class="btn btn-danger" onclick=" editarPlan(${r})">Guardar Plan</button>
+    
+    `
+
+}
+
+///FUNCION EDITAR PLAN
+
+function editarPlan(m) {
+
+
+    let editado = {
+
+
+        nombrePlan: document.getElementById("nombre2").value,
+        precio: document.getElementById("precio2").value,
+        promos: document.getElementById("promos2").value,
+        almacenamiento: document.getElementById("almacenamiento2").value,
+        soporte: document.getElementById("soporte2").value,
+        centroDeAyuda: document.getElementById("ayuda2").value,
+        duracion: document.getElementById("duracion2").value,
+        panpallaPrincipal: document.getElementById("principal2").value,
+
+
+
+
+    };
+    planes.splice(m, 1, editado)
+        // planes.push(editado);
+    localStorage.setItem('planes', JSON.stringify(planes));
+    $('#exampleModal2').modal('hide');
+    alert("Plan editado con exito");
+    tablaPlanes()
+
+}
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-//////CONTROLADOR COMPRA////////
+/////////////////////////////////////////////////////////CONTROLADOR COMPRA/////////////////////////////
 
 //Funcion que cargara los datso del pedido
 

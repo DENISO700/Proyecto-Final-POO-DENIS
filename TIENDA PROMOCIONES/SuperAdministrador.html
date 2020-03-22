@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body onload="tablaEmpresas();tablaPlanes();">
 
     <!-- CABEZERA-->
     <header class="main-header">
@@ -109,122 +109,9 @@
 
                     </thead>
                     <tbody id="empresas">
-                        <tr>
-
-                            <td class="thumbnail-img">
-                                <a href="#">
-                                    <img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
-                                </a>
-                            </td>
-
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-
-                            <td class="price-pr">
-                                <p>$ 30.0</p>
-                            </td>
-
-                            <td class="quantity-box">
-                                <input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text">
-                            </td>
-
-
-                            <td class="total-pr">
-                                <p>$ 80.0</p>
-                            </td>
-
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
-                            <td class="name-pr">
-                                <a href="#">
-                            Lorem ipsum dolor sit amet
-                        </a>
-                            </td>
 
 
 
-                        </tr>
 
                     </tbody>
 
@@ -258,21 +145,19 @@
                         <th>Titulo</th>
                         <th>Precio</th>
 
-                        <th>Beneficio 1</th>
+                        <th>Promociones</th>
 
-                        <th>Beneficio 2</th>
+                        <th>Almacenamiento </th>
 
-                        <th>Beneficio 3</th>
-                        <th>Beneficio 4</th>
-                        <th>Beneficio 5</th>
-                        <th>Beneficio 6</th>
-                        <th>Beneficio 7</th>
-                        <th>Beneficio 8</th>
-
+                        <th>Soporte</th>
+                        <th>Centro de Ayuda</th>
+                        <th>Duracion </th>
+                        <th>Pantalla Principal</th>
 
 
                     </thead>
-                    <tbody>
+
+                    <tbody id="planes">
 
                     </tbody>
 
@@ -280,16 +165,11 @@
                 </table>
 
             </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-outline-danger">Nuevo Plan </button>
-            </div>
-            <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-outline-danger">Borrar Plan </button>
-            </div>
 
             <div class="col-md-4 text-center">
-                <button type="button" class="btn btn-outline-danger">Editar Plan </button>
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">Nuevo Plan </button>
             </div>
+
 
 
 
@@ -298,6 +178,119 @@
     </div>
     <!-- FIN PLANES-->
 
+
+    <!-- Modal Nuevo Plan-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Creacion de Plan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Precio:</label>
+                            <input type="text" class="form-control" id="precio">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Espacios de Promociones:</label>
+                            <input type="text" class="form-control" id="promos">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Almacenamiento:</label>
+                            <input type="text" class="form-control" id="almacenamiento">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Soporte Tecnico:</label>
+                            <input type="checkbox" class="form-control" id="soporte">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Centro de Ayuda:</label>
+                            <input type="checkbox" class="form-control" id="ayuda">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Duracion:</label>
+                            <input type="text" class="form-control" id="duracion">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Pantalla Principal:</label>
+                            <input type="checkbox" class="form-control" id="principal">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger" onclick="guardarPlan();">Guardar Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Nuevo Plan-->
+
+    <!-- Modal Editar Plan-->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Creacion de Plan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Precio:</label>
+                            <input type="text" class="form-control" id="precio2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Espacios de Promociones:</label>
+                            <input type="text" class="form-control" id="promos2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Almacenamiento:</label>
+                            <input type="text" class="form-control" id="almacenamiento2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Soporte Tecnico:</label>
+                            <input type="checkbox" class="form-control" id="soporte2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Centro de Ayuda:</label>
+                            <input type="checkbox" class="form-control" id="ayuda2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Duracion:</label>
+                            <input type="text" class="form-control" id="duracion2">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Pantalla Principal:</label>
+                            <input type="checkbox" class="form-control" id="principal2">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer" id="botones">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Editar Plan-->
 
     <!-- Cerrar Sesion Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
