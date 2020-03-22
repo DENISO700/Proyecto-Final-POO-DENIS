@@ -1,4 +1,4 @@
-//////CONTROLADOR CARRITO////////
+//////CONTROLADOR COMPRA////////
 
 //Funcion que cargara los datso del pedido
 

@@ -1205,6 +1205,8 @@ if (localStorage.getItem("empresa") == null) {
 
 //////////////////////////////////////////////////////////////
 
+//////////////////////CONTROLADOR FICHA DE IMPRESAION////////////////////////
+
 //FUNCION PARA GENERAR PDF
 
 function getPDF() {
@@ -2351,3 +2353,126 @@ function tablaEmpresas() {
 
 
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////CONTROLADOR COMPRA////////
+
+//Funcion que cargara los datso del pedido
+
+function pedido() {
+
+    document.getElementById("pedido").innerHTML = ``;
+
+    for (let p = 0; p < 6; p++) {
+
+        document.getElementById("pedido").innerHTML +=
+            `
+            <div class="media mb-2 border-bottom">
+
+            <div class="media-body"> <a href="#"> Lorem ipsum dolor sit amet</a>
+                <div class="small text-muted">Precio: $80.00 <span class="mx-2">|</span> Ctd: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
+            </div>
+        </div>
+        
+        `;
+
+
+    }
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
+//Funcion que carga los tipos de envio
+
+function envio() {
+
+    document.getElementById("envio").innerHTML = ``;
+
+    for (let p = 0; p < 4; p++) {
+
+        document.getElementById("envio").innerHTML +=
+            `
+            <div class="custom-control custom-radio">
+                 <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
+                 <label class="custom-control-label" for="shippingOption3">Siguiente dia Habil</label> <span class="float-right font-weight-bold">$20.00</span>
+            </div>
+        
+        `;
+
+
+    }
+
+}
+
+
+/////////////////////////CONTROLADOR REGISTRO EMPRESAS/////////////////////////////
+
+//FuncionCargarSelect
+
+function CargarPlanes() {
+
+
+    for (let i = 0; i < planes.length; i++) {
+
+
+
+        document.getElementById("plan").innerHTML +=
+
+            `  <option value="${planes[i].nombrePlan}">${planes[i].nombrePlan}</option>`;
+
+
+    }
+
+}
+
+
+
+///////////////////////////////////////////////////////////////
+
+function nuevaEmpresa() {
+
+    let empresa = {
+
+        nombreEmpresa: document.getElementById('nombre').value,
+        logo: document.getElementById('logo').value,
+        correo: document.getElementById('correo').value,
+        contraseña: document.getElementById('contraseña').value,
+        descripcion: document.getElementById('descripcion').value,
+        mision: document.getElementById('mision').value,
+        vision: document.getElementById('vision').value,
+        telefono: document.getElementById('telefono').value,
+        pais: document.getElementById('pais').value,
+        ciudad: document.getElementById('ciudad').value,
+        redesSociales: [{
+            nombreRed1: document.getElementById('red1').value,
+            url1: document.getElementById('url1').value,
+            banner1: document.getElementById('logo1').value,
+            nombreRed2: document.getElementById('red2').value,
+            url2: document.getElementById('url2').value,
+            banner2: document.getElementById('logo2').value,
+            nombreRed3: document.getElementById('red3').value,
+            url3: document.getElementById('url3').value,
+            banner3: document.getElementById('logo3').value,
+        }],
+        direccion: document.getElementById('direccion').value,
+        latitud: document.getElementById('latitud').value,
+        longitud: document.getElementById('longitud').value,
+        formaDePago: document.getElementById('formaPago').value,
+        nombrePropietario: document.getElementById('propietario').value,
+        numeroTarjeta: document.getElementById('numeroTarjeta').value,
+        vencimiento: document.getElementById('Vencimiento').value,
+        CCV: document.getElementById('CCV').value,
+        plan: document.getElementById('plan').value,
+        sucursales: [],
+        productos: [],
+        promociones: []
+    };
+    empresas.push(empresa);
+    localStorage.setItem('empresas', JSON.stringify(empresas));
+
+}
+
+///////////////////////////////////////////////////////////////////////////
