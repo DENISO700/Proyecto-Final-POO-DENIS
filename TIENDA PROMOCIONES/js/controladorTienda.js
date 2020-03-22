@@ -1,7 +1,7 @@
 /////////////////////CONTROLADOR TIENDA////////////////////////////////
 
 //Crea la vista en celdas de los productos
-function Celdas() {
+function CeldasTienda() {
 
     document.getElementById("celdas").innerHTML = "";
 
@@ -46,7 +46,7 @@ function Celdas() {
 
 
 //Crea la vista en filas de los productos
-function lista() {
+function listaTienda() {
 
     document.getElementById("list-view").innerHTML = "";
 
@@ -109,7 +109,7 @@ function lista() {
 //Funcion que muestra las categorias
 
 
-function Menu() {
+function MenuTienda() {
 
 
     document.getElementById("list-group-men").innerHTML = ``;
@@ -146,7 +146,7 @@ function Menu() {
 
 //Funcion que muestra los comentarios
 
-function Comentarios() {
+function ComentariosTienda() {
 
     document.getElementById("comentarios").innerHTML = ``;
 

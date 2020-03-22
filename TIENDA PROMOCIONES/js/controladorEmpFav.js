@@ -1129,7 +1129,7 @@ if (localStorage.getItem("empresa") == null) {
 }
 
 
-//////////////////////////////////////////////////////////////
+/////////////CONTROLADOR EMPRESAS FAVORITAS//////////////////////
 //Funcion para generar laS Empresas Favoritas
 
 function EmpFav() {

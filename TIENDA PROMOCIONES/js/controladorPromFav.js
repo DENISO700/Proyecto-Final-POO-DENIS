@@ -1129,7 +1129,7 @@ if (localStorage.getItem("empresa") == null) {
 }
 
 
-//////////////////////////////////////////////////////////////
+////////////////////////CONTROLADOR EMPRESAS FAVORITAS//////////////////////////////////////
 function PromFav() {
 
     document.getElementById("PromFav").innerHTML = ``;

@@ -984,24 +984,6 @@ if (localStorage.getItem("empresa") == null) {
 
 
 
-////////////////////////////////////////////////////////////////////
-//Funcion llenar Group Button
-function generarButtons() {
-
-
-    for (let i = 0; i < categorias.length; i++) {
-
-
-
-        document.getElementById("filtro").innerHTML +=
-
-            `  <button data-filter=".${categorias[i]}">${categorias[i]}</button>`;
-
-
-    }
-}
-//generarButtons();
-
 
 ///////////FUNCIONES DE CATALOGO/////////////////////////////////////
 
@@ -1123,6 +1105,26 @@ function Catalogo() {
 }
 
 //Catalogo();
+
+
+
+////////////////////////////////////////////////////////////////////
+//Funcion llenar Group Button
+function generarButtons() {
+
+
+    for (let i = 0; i < categorias.length; i++) {
+
+
+
+        document.getElementById("filtro").innerHTML +=
+
+            `  <button data-filter=".${categorias[i]}">${categorias[i]}</button>`;
+
+
+    }
+}
+//generarButtons();
 
 
 
