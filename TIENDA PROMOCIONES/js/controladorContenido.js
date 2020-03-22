@@ -1887,7 +1887,7 @@ function CeldasTienda() {
                 <div class="mask-icon">
                     <ul>
 
-                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" ><i class="far fa-heart"></i></a></li>
+                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${j});" ><i class="far fa-heart"></i></a></li>
                     </ul>
                     <a class="cart" href="#">Agregar al Carrito</a>
                 </div>
@@ -1936,7 +1936,7 @@ function listaTienda() {
                             <ul>
 
 
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos"><i class="far fa-heart"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${j});"><i class="far fa-heart"></i></a></li>
                             </ul>
 
                         </div>
@@ -2038,6 +2038,33 @@ function ComentariosTienda() {
     }
 
     document.getElementById("comentarios").innerHTML += ` <a href="#" class="btn hvr-hover">Comentar</a>`;
+
+}
+
+
+//fUNCION PARA AGREGAR A FAVORITOS las promos
+//generar los productos dinamicamente primero luego volver
+function promosFav(l) {
+
+    let promosFav = {
+
+        nombreEmpresa: empresas[l].nombreEmpresa,
+        logo: empresas[l].logo,
+        correo: empresas[l].correo,
+        contraseña: empresas[l].contraseña,
+        descripcion: empresas[l].descripcion,
+        mision: empresas[l].mision,
+        vision: empresas[l].vision,
+        telefono: empresas[l].telefono,
+        pais: empresas[l].pais,
+        ciudad: empresas[l].ciudad,
+
+        redesSociales: empresas[l].redesSociales,
+    }
+    usuarios[0].empresasFavoritas.push(promosFav);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+
 
 }
 
