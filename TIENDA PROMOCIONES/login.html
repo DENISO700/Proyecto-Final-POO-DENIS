@@ -16,6 +16,35 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css">
 
+    <style>
+        #contenido {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: block;
+            transition: all 1s ease-in-out;
+        }
+        
+        .input-error {
+            border: 1px solid red;
+        }
+        
+        .input-success {
+            border: 1px solid green;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            font-size: 16px;
+            padding: 10px;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline-width: 0;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -72,10 +101,12 @@
 
         <div class="col-md-4  text-center m-auto pb-3"><input type="password" placeholder="Contraseña" id="contraseña" class="login-text form-control" required></div>
         <div class="col-md-4 m-auto text-left pb-3"><label for="Rellenar" class="chek-login"><input type="checkbox" id="Rellenar" checked>Mantenerme Registrado</label></div>
-        <div class="col-md-4 m-auto text-center pb-3"><a class="btn aceptar btn-primary" href="#" onclick="Admin();"><span ></span>INICIAR SESION</a></div>
+        <div class="col-md-4 m-auto text-center pb-3"><a class="btn aceptar btn-primary" href="#" onclick="campoVacio();;"><span ></span>INICIAR SESION</a></div>
         <div class="col-md-4 m-auto text-center"><a href="#">Olvidaste tu Contraseña?</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/RegistroCliente.html">Crear Cuenta</a></div>
     </div>
     <!-- Fin Formulario-->
+
+    <script src="/js/controladorValidaciones.js"></script>
 
     <script src="/js/controladorContenido.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>

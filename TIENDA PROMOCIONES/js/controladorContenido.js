@@ -133,17 +133,32 @@ if (localStorage.getItem("usuarios") == null) {
                 carrito: [
 
                     {
-                        categoria: "Anime",
                         nombre: "Figura de Anime",
-                        precio: "$ 40.00",
-                        cantida: "24",
-                        descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+                        precio: "$ 30.00",
+                        porcentaje: "0.5",
+                        descripcion: "Lorem ipsum dolor  567. . . ",
+                        inicio: "12/12/2020",
+                        final: "11/11/2021",
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: "45",
+                                longitud: "54",
+
+                            },
+
+                        ],
+
                         imagenes: [
                             "images/gallery-img-12.jpg",
                             "images/gallery-img-12.jpg",
@@ -210,25 +225,7 @@ if (localStorage.getItem("usuarios") == null) {
                             "images/gallery-img-01.jpg",
                         ],
 
-                        Comentarios: [
 
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
                     }
 
                 ]
@@ -507,9 +504,9 @@ if (localStorage.getItem("empresas") == null) {
 
                     {
 
-                        nombre: "Figura de Anime",
-                        precio: "$ 30.00",
-                        porcentaje: "0.5",
+                        nombre: "Figura de Kimetsu no Yaiba",
+                        precio: 30.00,
+                        porcentaje: 0.5,
                         descripcion: "Lorem ipsum dolor . . . ",
                         inicio: "12/12/2020",
                         final: "11/11/2021",
@@ -534,9 +531,64 @@ if (localStorage.getItem("empresas") == null) {
                         ],
 
                         imagenes: [
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-11.jpg",
+                            "images/gallery-img-11.jpg",
+                            "images/gallery-img-11.jpg",
+                        ],
+
+                        Comentarios: [
+
+                            {
+                                usuario: "Denis Ordoñez",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Darwin Rodas",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Isaac Ramirez",
+                                calificacion: 4,
+                                contenido: "Lorem ipsum dolor . . . "
+                            }
+
+                        ]
+                    },
+
+                    {
+
+                        nombre: "Figura de Naruto",
+                        precio: 50.00,
+                        porcentaje: 0.3,
+                        descripcion: "Lorem ipsum dolor . . . ",
+                        inicio: "12/12/2020",
+                        final: "11/11/2021",
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: "45",
+                                longitud: "54",
+
+                            },
+
+                        ],
+
+                        imagenes: [
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
                         ],
 
                         Comentarios: [
@@ -559,6 +611,7 @@ if (localStorage.getItem("empresas") == null) {
 
                         ]
                     }
+
 
                 ]
 
@@ -822,9 +875,9 @@ if (localStorage.getItem("empresas") == null) {
 
                     {
 
-                        nombre: "Figura de Anime",
-                        precio: "$ 30.00",
-                        porcentaje: "0.5",
+                        nombre: "Telefono",
+                        precio: 300.00,
+                        porcentaje: 0.4,
                         descripcion: "Lorem ipsum dolor . . . ",
                         inicio: "12/12/2020",
                         final: "11/11/2021",
@@ -852,6 +905,61 @@ if (localStorage.getItem("empresas") == null) {
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
+                        ],
+
+                        Comentarios: [
+
+                            {
+                                usuario: "Denis Ordoñez",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Darwin Rodas",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Isaac Ramirez",
+                                calificacion: 4,
+                                contenido: "Lorem ipsum dolor . . . "
+                            }
+
+                        ]
+                    },
+
+                    {
+
+                        nombre: "Laptop",
+                        precio: 800.00,
+                        porcentaje: 0.2,
+                        descripcion: "Lorem ipsum dolor . . . ",
+                        inicio: "12/12/2020",
+                        final: "11/11/2021",
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: "45",
+                                longitud: "54",
+
+                            },
+
+                        ],
+
+                        imagenes: [
+                            "images/gallery-img-02.jpg",
+                            "images/gallery-img-02.jpg",
+                            "images/gallery-img-02.jpg",
                         ],
 
                         Comentarios: [
@@ -1136,9 +1244,9 @@ if (localStorage.getItem("empresas") == null) {
 
                     {
 
-                        nombre: "Figura de Anime",
-                        precio: "$ 30.00",
-                        porcentaje: "0.5",
+                        nombre: "Mueble de Oficina",
+                        precio: 200.00,
+                        porcentaje: 0.4,
                         descripcion: "Lorem ipsum dolor . . . ",
                         inicio: "12/12/2020",
                         final: "11/11/2021",
@@ -1163,9 +1271,64 @@ if (localStorage.getItem("empresas") == null) {
                         ],
 
                         imagenes: [
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-05.jpg",
+                            "images/gallery-img-05.jpg",
+                            "images/gallery-img-05.jpg",
+                        ],
+
+                        Comentarios: [
+
+                            {
+                                usuario: "Denis Ordoñez",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Darwin Rodas",
+                                calificacion: 3,
+                                contenido: "Lorem ipsum dolor . . . "
+                            },
+                            {
+                                usuario: "Isaac Ramirez",
+                                calificacion: 4,
+                                contenido: "Lorem ipsum dolor . . . "
+                            }
+
+                        ]
+                    },
+
+                    {
+
+                        nombre: "Silla de Oficina",
+                        precio: 150.00,
+                        porcentaje: 0.4,
+                        descripcion: "Lorem ipsum dolor . . . ",
+                        inicio: "12/12/2020",
+                        final: "11/11/2021",
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: "45",
+                                longitud: "54",
+
+                            },
+
+                        ],
+
+                        imagenes: [
+                            "images/gallery-img-04.jpg",
+                            "images/gallery-img-04.jpg",
+                            "images/gallery-img-04.jpg",
                         ],
 
                         Comentarios: [
@@ -1247,9 +1410,10 @@ function getPDF() {
 
 function Admin() {
     var temp = document.getElementById('correo').value;
+    var temp2 = document.getElementById('contraseña').value;
     // var contra = document.getElementById("contraseña").value;
 
-    if (temp == "denis") {
+    if (temp == "denis" && temp2 == "1234") {
         location.href = 'SuperAdministrador.html';
     } else {
         location.href = 'my-account.html';
@@ -1875,36 +2039,46 @@ function CeldasTienda() {
 
     document.getElementById("celdas").innerHTML = "";
 
-    for (let j = 0; j < 9; j++) {
+    for (let e = 0; e < empresas.length; e++) {
 
-        document.getElementById("celdas").innerHTML += `
+        for (let j = 0; j < empresas[e].promociones.length; j++) {
 
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-        <div class="products-single fix">
-            <div class="box-img-hover">
+            let precio = empresas[e].promociones[j].precio;
+            let rebaja = empresas[e].promociones[j].porcentaje;
 
-                <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
-                <div class="mask-icon">
-                    <ul>
+            let promocion = precio - precio * rebaja;
 
-                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${j});" ><i class="far fa-heart"></i></a></li>
-                    </ul>
-                    <a class="cart" href="#">Agregar al Carrito</a>
+            document.getElementById("celdas").innerHTML += `
+    
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+    
+                    <img src="${empresas[e].promociones[j].imagenes[0]}" class="img-fluid" alt="Image">
+                    <div class="mask-icon">
+                        <ul>
+    
+                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${e},${j});" ><i class="far fa-heart"></i></a></li>
+                        </ul>
+                        <a class="cart" href="#" onclick = "añadirCarrito(${e},${j});">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="why-text ">
+                    <h4>${empresas[e].promociones[j].nombre}</h4>
+                    <h5>$ ${promocion}</h5>
                 </div>
             </div>
-            <div class="why-text">
-                <h4>Lorem ipsum dolor sit amet</h4>
-                <h5> $9.79</h5>
-            </div>
         </div>
-    </div>
-        
-        
-        
-        `;
+            
+            
+            
+            `;
 
 
+        }
     }
+
+
 
 
 
@@ -1917,53 +2091,69 @@ function listaTienda() {
 
     document.getElementById("list-view").innerHTML = "";
 
-    for (let j = 0; j < 9; j++) {
-
-        document.getElementById("list-view").innerHTML += `
-
-        <div class="list-view-box">
-
-        <div class="row">
-
-            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-
-                <div class="products-single fix">
-
-                    <div class="box-img-hover">
-
-                        <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
-                        <div class="mask-icon">
-                            <ul>
 
 
-                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${j});"><i class="far fa-heart"></i></a></li>
-                            </ul>
+    for (let e = 0; e < empresas.length; e++) {
 
+        for (let j = 0; j < empresas[e].promociones.length; j++) {
+
+
+            let precio = empresas[e].promociones[j].precio;
+            let rebaja = empresas[e].promociones[j].porcentaje;
+
+            let promocion = precio - precio * rebaja;
+
+            document.getElementById("list-view").innerHTML += `
+        
+                <div class="list-view-box">
+        
+                <div class="row">
+        
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        
+                        <div class="products-single fix">
+        
+                            <div class="box-img-hover ">
+        
+                                <img src="${empresas[e].promociones[j].imagenes[0]}" alt="Image">
+                                <div class="mask-icon">
+                                    <ul>
+        
+        
+                                        <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "promosFav(${e},${j});"><i class="far fa-heart"></i></a></li>
+                                    </ul>
+        
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
-                <div class="why-text full-width">
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <h5> <del>$ 60.00</del> $40.79</h5>
-                    <p>Integer tincidunt aliquet nibh vitae dictum. In turpis sapien, imperdiet quis magna nec, iaculis ultrices ante. Integer vitae suscipit nisi. Morbi dignissim risus sit amet orci porta, eget aliquam purus
-                        sollicitudin. Cras eu metus felis. Sed arcu arcu, sagittis in blandit eu, imperdiet sit amet eros. Donec accumsan nisi purus, quis euismod ex volutpat in. Vestibulum eleifend eros ac lobortis aliquet.
-                        Suspendisse at ipsum vel lacus vehicula blandit et sollicitudin quam. Praesent vulputate semper libero pulvinar consequat. Etiam ut placerat lectus.</p>
-                    <a class="btn hvr-hover" href="#">Agregar al Carrito</a>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
         
+                    <div class="col-sm-6 col-md-6 col-lg-8 col-xl-8">
+                        <div class="why-text full-width">
+                            <h4>${empresas[e].promociones[j].nombre}</h4>
+                            <h5> <del>$ ${empresas[e].promociones[j].precio}  </del>$ ${promocion}</h5>
+                            <p>${empresas[e].promociones[j].descripcion} </p>
+                            <a class="btn hvr-hover" href="#">Agregar al Carrito</a>
+                        </div>
+                    </div>
         
-        `;
+                </div>
+        
+            </div>
+                
+                
+                `;
 
 
+
+
+
+        }
     }
+
+
+
+
 
 
 
@@ -1979,21 +2169,14 @@ function MenuTienda() {
 
     document.getElementById("list-group-men").innerHTML = ``;
 
-    for (let l = 0; l < 3; l++) {
+    for (let l = 0; l < categorias.length; l++) {
         document.getElementById("list-group-men").innerHTML +=
             `
             <div class="list-group-collapse sub-men">
-            <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="true" aria-controls="sub-men1">Electronicos<small class="text-muted">(100)</small>
+            <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse"  >${categorias[l]}
         </a>
 
-            <div class="collapse show" id="sub-men1" data-parent="#list-group-men">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active">Moviles<small class="text-muted">(50)</small></a>
-                    <a href="#" class="list-group-item list-group-item-action">Laptos <small class="text-muted">(10)</small></a>
-                    <a href="#" class="list-group-item list-group-item-action">Memorias<small class="text-muted">(10)</small></a>
-                    <a href="#" class="list-group-item list-group-item-action">Mini Componentes <small class="text-muted">(10)</small></a>
-                    <a href="#" class="list-group-item list-group-item-action">Accesorios <small class="text-muted">(20)</small></a>
-                </div>
+         
             </div>
         </div>
         
@@ -2043,32 +2226,66 @@ function ComentariosTienda() {
 
 
 //fUNCION PARA AGREGAR A FAVORITOS las promos
-//generar los productos dinamicamente primero luego volver
-function promosFav(l) {
+
+function promosFav(j, l) {
 
     let promosFav = {
 
-        nombreEmpresa: empresas[l].nombreEmpresa,
-        logo: empresas[l].logo,
-        correo: empresas[l].correo,
-        contraseña: empresas[l].contraseña,
-        descripcion: empresas[l].descripcion,
-        mision: empresas[l].mision,
-        vision: empresas[l].vision,
-        telefono: empresas[l].telefono,
-        pais: empresas[l].pais,
-        ciudad: empresas[l].ciudad,
+        nombre: empresas[j].promociones[l].nombre,
+        precio: empresas[j].promociones[l].precio,
+        porcentaje: empresas[j].promociones[l].porcentaje,
+        descripcion: empresas[j].promociones[l].descripcion,
+        inicio: empresas[j].promociones[l].inicio,
+        final: empresas[j].promociones[l].final,
 
-        redesSociales: empresas[l].redesSociales,
+        sucursales: empresas[j].promociones[l].sucursales,
+
+        imagenes: empresas[j].promociones[l].imagenes,
+
+
     }
-    usuarios[0].empresasFavoritas.push(promosFav);
+
+    usuarios[0].promocionesFavoritas.push(promosFav);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
 
 
 }
 
-////////////////////////CONTROLADOR EMPRESAS FAVORITAS//////////////////////////////////////
+
+///////////////////////////////////////////////
+
+//funcion agregar al carrito
+function añadirCarrito(j, l) {
+
+    let carrito = {
+
+
+        nombre: empresas[j].promociones[l].nombre,
+        precio: empresas[j].promociones[l].precio,
+        porcentaje: empresas[j].promociones[l].porcentaje,
+        descripcion: empresas[j].promociones[l].descripcion,
+        inicio: empresas[j].promociones[l].inicio,
+        final: empresas[j].promociones[l].final,
+
+        sucursales: empresas[j].promociones[l].sucursales,
+
+        imagenes: empresas[j].promociones[l].imagenes,
+
+
+    }
+
+    usuarios[0].carrito.push(carrito);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+
+
+}
+
+
+////////////////////////CONTROLADOR PROMOCIONES FAVORITAS//////////////////////////////////////
+
+
 function PromFav() {
 
     document.getElementById("PromFav").innerHTML = ``;
@@ -2118,41 +2335,48 @@ function Carrito() {
 
     document.getElementById("cuerpo").innerHTML = ``;
 
-    for (let c = 0; c < 9; c++) {
+
+    for (let m = 0; m < usuarios[0].carrito.length; m++) {
+
+
 
         document.getElementById("cuerpo").innerHTML +=
             `
-    
-            <tr>
-            <td class="thumbnail-img">
-                <a href="#">
-                    <img class="img-fluid" src="images/img-pro-03.jpg" alt="" />
-                </a>
-            </td>
-            <td class="name-pr">
-                <a href="#">
-            Lorem ipsum dolor sit amet
-        </a>
-            </td>
-            <td class="price-pr">
-                <p>$ 30.0</p>
-            </td>
-            <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
-            <td class="total-pr">
-                <p>$ 80.0</p>
-            </td>
-            <td class="remove-pr">
-                <a href="#">
-                    <i class="fas fa-times"></i>
-                </a>
-            </td>
-        </tr>
-    
-    
-    `;
+        
+                <tr>
+                <td class="thumbnail-img">
+                    <a href="#">
+                        <img class="img-fluid" src="${usuarios[0].carrito[m].imagenes[0]}"  />
+                    </a>
+                </td>
+                <td class="name-pr">
+                    <a href="#">
+                    ${usuarios[0].carrito[m].nombre}
+            </a>
+                </td>
+                <td class="price-pr">
+                    <p> $ ${usuarios[0].carrito[m].precio}</p>
+                </td>
+                <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                <td class="total-pr">
+                    <p>$ 80.0</p>
+                </td>
+                <td class="remove-pr">
+                    <a href="#">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+        
+        
+        `;
+
+
 
 
     }
+
+
 
 }
 
