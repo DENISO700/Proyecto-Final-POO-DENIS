@@ -22,7 +22,7 @@
 </head>
 
 
-<body class="usuario-reg">
+<body class="usuario-reg" onload=" editarUsuario(0);">
 
     <!--CABEZERA-->
     <header class="main-header">
@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp" style="color: white;">
 
-                        <li class="nav-item"><a class="nav-link" href="/my-account.html"><i class="fa fa-user" ></i>&nbsp;&nbsp;Mi Cuenta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/my-account.html"><i class="fa fa-undo" ></i>&nbsp;&nbsp;Regresar</a></li>
 
                     </ul>
                 </div>
@@ -72,13 +72,13 @@
         <div class="formulario">
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datos Registrados</h1>
             <form action="#">
-                <input type="text" placeholder="Usuario" required>
+                <input type="text" placeholder="Usuario" id="nombre" required>
 
-                <input type="password" placeholder="Contraseña" required>
+                <input type="text" placeholder="Contraseña" id="contraseña" required>
 
-                <input type="email" placeholder="Correo Electronico" required>
+                <input type="email" placeholder="Correo Electronico" id="email" required>
 
-                <input type="text" placeholder="Teléfono" required>
+                <input type="text" placeholder="Teléfono" id="telefono" required>
 
                 <input type="submit" value="Guardar">
             </form>
@@ -89,6 +89,7 @@
 
 
     <!-- ALL JS FILES -->
+    <script src="/js/controladorContenido.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
