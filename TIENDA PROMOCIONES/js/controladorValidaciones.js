@@ -1,6 +1,6 @@
 //CONTROLADOR DE VALIDACIONES//
 
-function campoVacio() {
+function campoVacio1() {
 
     valor = document.getElementById("correo").value;
     valor2 = document.getElementById("contraseña").value;
