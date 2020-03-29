@@ -1749,7 +1749,7 @@ function listaTienda() {
         
                             <div class="box-img-hover ">
         
-                                <img src="${empresas[e].promociones[j].imagenes[0]}" alt="Image">
+                                <img src="${empresas[e].promociones[j].imagenes[0]}" class="w-100" alt="Image">
                                 <div class="mask-icon">
                                     <ul>
         

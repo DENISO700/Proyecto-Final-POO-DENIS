@@ -1661,7 +1661,7 @@ if (localStorage.getItem("empresas") == null) {
 } else {
     empresas = JSON.parse(localStorage.getItem('empresas'));
 }
-
+//Agregar el jason de Catalogo para hacerlol funcionar 
 
 //////////////////////////////////////////////////////////////
 
@@ -1785,35 +1785,28 @@ function Modal(k) {
 
     document.getElementById("cuerpo").innerHTML =
 
-        `      <div class="row" id="datos">
+        `      
+       
+
+          <div class="col-6">
+            <img src="${empresas[k].logo}" class="w-100 h-75" >
+          </div>
     
-        <div class="col-4">
-            <img src="${empresas[k].logo}" class="w-100" alt="">
+        <div class="col-6 ">
+            <h1>${empresas[k].nombreEmpresa}</h1>
+            <h1>${empresas[k].correo}</h1>
+            <p>${empresas[k].descripcion}</p>
+            <p>${empresas[k].mision}</p>
+            <p>${empresas[k].vision}</p>
+            <p>${empresas[k].telefono}</p>
+            <p>${empresas[k].pais}</p>
+           
         </div>
-    
-        <div class="col-6">
-            <h5>Nombre Categoria</h5>
-            <h6>Nombre Producto</h6>
-            <p>lorem iptsum dolor . . . </p>
-        </div>
-    
-        <hr>
-    
-        <div class="col-12">
-        <p class="text-center"><i class="fa fa-star" style="color: green;"></i><i class="fa fa-star" style="color: green;"></i><i class="fa fa-star" style="color: green;"></i><i class="fa fa-star-o" style="color: green;"></i><i class="fa fa-star-o" style="color: green;"></i></p>
-        </div>
-    
-        <hr>
-    
-    </div>
-            
-        <div class="modal-footer ml-auto">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
       
-        </div>
+        <hr>
     
-    
-    </div>`;
+    `;
 
 
 
@@ -1825,22 +1818,62 @@ function Modal(k) {
 function Carrusel(k) {
 
 
-    document.getElementById("img").innerHTML = `      
-    <div class="carousel-item active">
-        <img src="images/gallery-img-02.jpg" class="d-block w-100" >
+    document.getElementById("img").innerHTML =
+        ` 
+
+        <div class="carousel-item  active ">
+    
+        <div class="row">
+          <div class="col-8">
+               <img src="images/gallery-img-02.jpg" class="d-block w-100 p-5" >
+          </div>
+
+          <div class="col-4 mt-2" style="color: white;">
+
+              <h5 style="color: white;">${empresas[k].sucursales[0].nombreSucursal}</h5>
+              <p>${empresas[k].sucursales[0].correo}</p>
+              <p>${empresas[k].sucursales[0].redSocial}</p>
+              <p>${empresas[k].sucursales[0].url}</p>
+              <p>${empresas[k].sucursales[0].telefono}</p>
+              <p>${empresas[k].sucursales[0].direccion}</p>
+            
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+
+        </div>
+
+         
     </div>
-  
 
 `
 
 
-    for (let i = 1; i < 4; i++) {
+    for (let i = 1; i < empresas[k].sucursales.length; i++) {
 
         document.getElementById("img").innerHTML += `      
-        <div class="carousel-item ">
-            <img src="images/gallery-img-02.jpg" class="d-block w-100" >
+        <div class="carousel-item  ">
+    
+        <div class="row">
+          <div class="col-8">
+               <img src="images/gallery-img-02.jpg" class="d-block w-100 p-5" >
+          </div>
+
+          <div class="col-4 mt-2" style="color: white;">
+
+          <h5 style="color: white;">${empresas[k].sucursales[i].nombreSucursal}</h5>
+          <p>${empresas[k].sucursales[i].correo}</p>
+          <p>${empresas[k].sucursales[i].redSocial}</p>
+          <p>${empresas[k].sucursales[i].url}</p>
+          <p>${empresas[k].sucursales[i].telefono}</p>
+          <p>${empresas[k].sucursales[i].direccion}</p>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+
         </div>
-      
+
+         
+    </div>
+
     
   `
     }

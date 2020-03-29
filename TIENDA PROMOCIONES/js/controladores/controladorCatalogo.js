@@ -800,7 +800,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Anime",
                         nombre: "Figura de Kimetsu no Yaiba",
                         precio: 30.00,
                         porcentaje: 0.5,
@@ -855,7 +855,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Anime",
                         nombre: "Figura de Naruto",
                         precio: 50.00,
                         porcentaje: 0.3,
@@ -1171,7 +1171,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Electronicos",
                         nombre: "Telefono",
                         precio: 300.00,
                         porcentaje: 0.4,
@@ -1226,7 +1226,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Electronicos",
                         nombre: "Laptop",
                         precio: 800.00,
                         porcentaje: 0.2,
@@ -1540,7 +1540,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Mobiliario",
                         nombre: "Mueble de Oficina",
                         precio: 200.00,
                         porcentaje: 0.4,
@@ -1595,7 +1595,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Mobiliario",
                         nombre: "Silla de Oficina",
                         precio: 150.00,
                         porcentaje: 0.4,
@@ -1672,116 +1672,39 @@ function Catalogo() {
 
     document.getElementById("catalogo").innerHTML = "";
 
-    for (let c = 0; c < 3; c++) {
+    for (let index = 0; index < empresas.length; index++) {
 
-        document.getElementById("catalogo").innerHTML +=
-            `
-        <div class="col-lg-3 col-md-6 special-grid Electronicos">
-        <div class="products-single fix">
-            <div class="box-img-hover">
-                <img src="images/gallery-img-01.jpg" class="img-fluid w-100" >
-                <div class="mask-icon">
-                    <ul>
-                        <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
 
-                        <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                    </ul>
+        for (let c = 0; c < empresas[index].promociones.length; c++) {
 
+            document.getElementById("catalogo").innerHTML +=
+                `
+            <div class="col-lg-3 col-md-6 special-grid ${empresas[index].promociones[c].categoria}">
+            <div class="products-single fix">
+                <div class="box-img-hover">
+                    <img src="${empresas[index].promociones[c].imagenes[0]}" class="w-100" >
+                    <div class="mask-icon">
+                        <ul>
+                            <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${index},${c});Carrusel(${index},${c});Comentarios(${index},${c});" ><i class="fas fa-eye"></i></a></li>
+    
+                            <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
+                        </ul>
+    
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    
+    
+            `;
 
 
-        `;
-
-
-    }
-
-    //////////////////////////////////////////////
-
-    for (let c = 0; c < 3; c++) {
-
-        document.getElementById("catalogo").innerHTML +=
-            `
-    <div class="col-lg-3 col-md-6 special-grid Anime">
-    <div class="products-single fix">
-        <div class="box-img-hover">
-            <img src="images/gallery-img-12.jpg" class="img-fluid w-100" >
-            <div class="mask-icon">
-                <ul>
-                    <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                    <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    `;
-
+        }
 
     }
 
-    ////////////////////////////////////////////
 
 
-    for (let c = 0; c < 3; c++) {
-
-        document.getElementById("catalogo").innerHTML +=
-            `
-        <div class="col-lg-3 col-md-6 special-grid Mobiliario">
-        <div class="products-single fix">
-            <div class="box-img-hover">
-                <img src="images/gallery-img-05.jpg" class="img-fluid w-100" >
-                <div class="mask-icon">
-                    <ul>
-                        <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                        <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        `;
-
-
-    }
-
-    ////////////////////////////////////////////////////////
-
-    for (let c = 0; c < 3; c++) {
-
-        document.getElementById("catalogo").innerHTML +=
-            `
-        <div class="col-lg-3 col-md-6 special-grid Vestimenta">
-        <div class="products-single fix">
-            <div class="box-img-hover">
-                <img src="images/gallery-img-09.jpg" class="img-fluid w-100" >
-                <div class="mask-icon">
-                    <ul>
-                        <li><a href="#"  data-placement="right" title="Ver" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal();Carrusel();Comentarios();" ><i class="fas fa-eye"></i></a></li>
-
-                        <li><a href="/login.html" data-toggle="tooltip" data-placement="right" title="Agregar al Carrito"><i class="far fa-heart"></i></a></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        `;
-
-
-    }
 
 }
 
@@ -1807,7 +1730,7 @@ function generarButtons() {
 //Funcion Modal
 
 //generar la modal
-function Modal() {
+function Modal(index, c) {
 
 
     document.getElementById("cuerpo").innerHTML =
@@ -1815,13 +1738,13 @@ function Modal() {
         `      <div class="row" id="datos">
     
         <div class="col-4">
-            <img src="/images/banner-01.jpg" class="w-100" alt="">
+            <img src="${empresas[index].logo}" class="w-100" alt="">
         </div>
     
         <div class="col-6">
-            <h5>Nombre Categoria</h5>
-            <h6>Nombre Producto</h6>
-            <p>lorem iptsum dolor . . . </p>
+            <h5>${empresas[index].promociones[c].categoria}</h5>
+            <h6>${empresas[index].promociones[c].nombre}</h6>
+            <p>${empresas[index].promociones[c].descripcion} </p>
         </div>
     
         <hr>
@@ -1849,38 +1772,27 @@ function Modal() {
 
 ////////////////////////////////////////////////////////////////////////
 //Funcion que genra las imagenes
-function Carrusel() {
+function Carrusel(index, c) {
 
 
     document.getElementById("img").innerHTML = `      
-    <div class="carousel-item active">
-        <img src="images/gallery-img-02.jpg" class="d-block w-100" >
+    <div class="text-center m-auto">
+        <img src="${empresas[index].promociones[c].imagenes[0]}" class=" d-block w-75 h-75" >
     </div>
   
 
 `
 
 
-    for (let i = 1; i < 4; i++) {
-
-        document.getElementById("img").innerHTML += `      
-        <div class="carousel-item ">
-            <img src="images/gallery-img-02.jpg" class="d-block w-100" >
-        </div>
-      
-    
-  `
-    }
-
 }
 
 //////////////////////////////////////////////////////////////////////////
 
 //Funcion que carga los comentarios
-function Comentarios() {
+function Comentarios(index, c) {
     document.getElementById("comentarios").innerHTML = "";
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < empresas[index].promociones[c].Comentarios.length; i++) {
 
         document.getElementById("comentarios").innerHTML += `   <div class="row">
     
@@ -1890,8 +1802,8 @@ function Comentarios() {
     </div>
 
     <div class="col-10 my-2 text-rigth">
-        <h6>Nombre Usuario</h6>
-        <p>Lorem iptsum dolor . . . . </p>
+        <h6>${empresas[index].promociones[c].Comentarios[i].usuario}</h6>
+        <p>${empresas[index].promociones[c].Comentarios[i].contenido} </p>
     </div>
 </div> `
     }

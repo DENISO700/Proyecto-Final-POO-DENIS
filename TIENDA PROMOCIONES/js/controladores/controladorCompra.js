@@ -1675,14 +1675,14 @@ function pedido() {
 
     document.getElementById("pedido").innerHTML = ``;
 
-    for (let p = 0; p < 6; p++) {
+    for (let p = 0; p < usuarios[0].carrito.length; p++) {
 
         document.getElementById("pedido").innerHTML +=
             `
             <div class="media mb-2 border-bottom">
 
-            <div class="media-body"> <a href="#"> Lorem ipsum dolor sit amet</a>
-                <div class="small text-muted">Precio: $80.00 <span class="mx-2">|</span> Ctd: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
+            <div class="media-body"> <a href="#"> ${usuarios[0].carrito[p].nombre}</a>
+                <div class="small text-muted">Precio:${usuarios[0].carrito[p].precio} <span class="mx-2">|</span> Ctd: 1 <span class="mx-2">|</span> Subtotal: $80.00</div>
             </div>
         </div>
         
