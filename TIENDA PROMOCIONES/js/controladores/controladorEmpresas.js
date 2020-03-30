@@ -600,8 +600,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -615,8 +615,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -630,8 +630,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -970,8 +970,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -985,8 +985,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1000,8 +1000,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1340,8 +1340,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -1355,8 +1355,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1370,8 +1370,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1788,27 +1788,53 @@ function Modal(k) {
         `      
        
 
-          <div class="col-4 bg-danger h-25 p-1">
-            <img src="${empresas[k].logo}" class="w-100 h-25 p-2 " >
+          <div class="col-4 bg-danger p-1" style="height: 200px;"  >
+            <img src="${empresas[k].logo}" class="w-100 h-100 p-2 " >
           </div>
     
-        <div class="col-8 ">
+        <div class="col-4  datos-empresa">
+        
             <h1>${empresas[k].nombreEmpresa}</h1>
-            <h1>${empresas[k].correo}</h1>
+            <p> Correo: ${empresas[k].correo}</p>
             <p>${empresas[k].descripcion}</p>
-            <p>${empresas[k].mision}</p>
-            <p>${empresas[k].vision}</p>
-            <p>${empresas[k].telefono}</p>
+            <p> Telefono: ${empresas[k].telefono}</p>
             <p>${empresas[k].pais}</p>
            
         </div>
+
+        <div class="col-4 redes-empresa">
+
+        <h1>Redes Sociales</h1>
+        
+         <div class="row ">
+
+           <p>${empresas[k].redesSociales[0].nombreRed1} </p>
+           <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url1}</p>
+          
+         </div>
+         <div class="row ">
+
+         <p>${empresas[k].redesSociales[0].nombreRed2} </p>
+         <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url2}</p>
+        
+       </div>
+       <div class="row ">
+
+       <p>${empresas[k].redesSociales[0].nombreRed3} </p>
+           <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url3}</p>
+     </div>
+    
+       
+    </div>
 
       
         <hr>
     
     `;
 
-    cargarmap();
+
+
+    cargarmap(k, 0);
 
 
 
@@ -1823,12 +1849,12 @@ function Carrusel(k) {
     document.getElementById("img").innerHTML =
         ` 
 
-        <div class="carousel-item  active ">
+        <div class="carousel-item  active sucursal-datos">
     
        
-        <div class="mt-2 p-2" style="color: white;">
+        <div class="mt-2 p-2" >
 
-            <h5 style="color: white;">${empresas[k].sucursales[0].nombreSucursal}</h5>
+            <h5>${empresas[k].sucursales[0].nombreSucursal}</h5>
             <p>${empresas[k].sucursales[0].correo}</p>
             <p>${empresas[k].sucursales[0].redSocial}</p>
             <p>${empresas[k].sucursales[0].url}</p>
@@ -1845,12 +1871,12 @@ function Carrusel(k) {
     for (let i = 1; i < empresas[k].sucursales.length; i++) {
 
         document.getElementById("img").innerHTML += `      
-        <div class="carousel-item  ">
+        <div class="carousel-item sucursal-datos ">
     
        
-          <div class="mt-2 p-2" style="color: white;">
+          <div class="mt-2 p-2" >
 
-              <h5 style="color: white;">${empresas[k].sucursales[i].nombreSucursal}</h5>
+              <h5 >${empresas[k].sucursales[i].nombreSucursal}</h5>
               <p>${empresas[k].sucursales[i].correo}</p>
               <p>${empresas[k].sucursales[i].redSocial}</p>
               <p>${empresas[k].sucursales[i].url}</p>
@@ -1867,6 +1893,18 @@ function Carrusel(k) {
 
     
   `
+
+        document.getElementById("carouselExampleControls").innerHTML +=
+            `
+<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" onclick="cargarmap(${k},${i});">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" onclick="cargarmap(${k},${i});">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+`
     }
 
 }
@@ -1900,15 +1938,18 @@ function empFav(l) {
 
 var x = document.getElementById("demo");
 
-function cargarmap() {
+function cargarmap(k, i) {
+
+    alert(k);
+    alert(i);
 
 
     navigator.geolocation.getCurrentPosition(showPosition, showError);
 
     //Funcion para mostrar posicion
     function showPosition(position) {
-        lat = 14.08481023; //Valor de la latitud
-        lon = -87.1729061; //Valor de la longitud
+        lat = empresas[k].sucursales[i].latitud; //Valor de la latitud
+        lon = empresas[k].sucursales[i].longitud; //Valor de la longitud
         latlon = new google.maps.LatLng(lat, lon)
         mapholder = document.getElementById('mapholder')
         mapholder.style.height = '400px';

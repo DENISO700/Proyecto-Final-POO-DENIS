@@ -2041,3 +2041,23 @@ section.pricing {
     text-align: center;
     margin-top: 30px;
 }
+
+
+/*clases de la geolocalizacion*/
+
+.datos-empresa p {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.redes-empresa p {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sucursal-datos {
+    color: black;
+    font-weight: bold;
+}
