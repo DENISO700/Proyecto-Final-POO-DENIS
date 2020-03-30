@@ -1788,11 +1788,11 @@ function Modal(k) {
         `      
        
 
-          <div class="col-6">
-            <img src="${empresas[k].logo}" class="w-100 h-75" >
+          <div class="col-4 bg-danger h-25 p-1">
+            <img src="${empresas[k].logo}" class="w-100 h-25 p-2 " >
           </div>
     
-        <div class="col-6 ">
+        <div class="col-8 ">
             <h1>${empresas[k].nombreEmpresa}</h1>
             <h1>${empresas[k].correo}</h1>
             <p>${empresas[k].descripcion}</p>
@@ -1807,6 +1807,8 @@ function Modal(k) {
         <hr>
     
     `;
+
+    cargarmap();
 
 
 
@@ -1823,28 +1825,20 @@ function Carrusel(k) {
 
         <div class="carousel-item  active ">
     
-        <div class="row">
-          <div class="col-8">
-               <img src="images/gallery-img-02.jpg" class="d-block w-100 p-5" >
+       
+        <div class="mt-2 p-2" style="color: white;">
+
+            <h5 style="color: white;">${empresas[k].sucursales[0].nombreSucursal}</h5>
+            <p>${empresas[k].sucursales[0].correo}</p>
+            <p>${empresas[k].sucursales[0].redSocial}</p>
+            <p>${empresas[k].sucursales[0].url}</p>
+            <p>${empresas[k].sucursales[0].telefono}</p>
+            <p>${empresas[k].sucursales[0].direccion}</p>
+           
+           
           </div>
 
-          <div class="col-4 mt-2" style="color: white;">
-
-              <h5 style="color: white;">${empresas[k].sucursales[0].nombreSucursal}</h5>
-              <p>${empresas[k].sucursales[0].correo}</p>
-              <p>${empresas[k].sucursales[0].redSocial}</p>
-              <p>${empresas[k].sucursales[0].url}</p>
-              <p>${empresas[k].sucursales[0].telefono}</p>
-              <p>${empresas[k].sucursales[0].direccion}</p>
-            
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          </div>
-
-        </div>
-
-         
-    </div>
-
+      </div>
 `
 
 
@@ -1853,26 +1847,23 @@ function Carrusel(k) {
         document.getElementById("img").innerHTML += `      
         <div class="carousel-item  ">
     
-        <div class="row">
-          <div class="col-8">
-               <img src="images/gallery-img-02.jpg" class="d-block w-100 p-5" >
-          </div>
+       
+          <div class="mt-2 p-2" style="color: white;">
 
-          <div class="col-4 mt-2" style="color: white;">
-
-          <h5 style="color: white;">${empresas[k].sucursales[i].nombreSucursal}</h5>
-          <p>${empresas[k].sucursales[i].correo}</p>
-          <p>${empresas[k].sucursales[i].redSocial}</p>
-          <p>${empresas[k].sucursales[i].url}</p>
-          <p>${empresas[k].sucursales[i].telefono}</p>
-          <p>${empresas[k].sucursales[i].direccion}</p>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          </div>
+              <h5 style="color: white;">${empresas[k].sucursales[i].nombreSucursal}</h5>
+              <p>${empresas[k].sucursales[i].correo}</p>
+              <p>${empresas[k].sucursales[i].redSocial}</p>
+              <p>${empresas[k].sucursales[i].url}</p>
+              <p>${empresas[k].sucursales[i].telefono}</p>
+              <p>${empresas[k].sucursales[i].direccion}</p>
+             
+             
+            </div>
 
         </div>
 
          
-    </div>
+  
 
     
   `
@@ -1903,4 +1894,53 @@ function empFav(l) {
 
 
 
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+var x = document.getElementById("demo");
+
+function cargarmap() {
+
+
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+    //Funcion para mostrar posicion
+    function showPosition(position) {
+        lat = 14.08481023; //Valor de la latitud
+        lon = -87.1729061; //Valor de la longitud
+        latlon = new google.maps.LatLng(lat, lon)
+        mapholder = document.getElementById('mapholder')
+        mapholder.style.height = '400px';
+        mapholder.style.width = '700px';
+        var myOptions = {
+            center: latlon,
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false,
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+        };
+        var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+        var marker = new google.maps.Marker({ position: latlon, map: map, title: "Aqui estamos!" });
+    }
+
+
+
+    //Funcion de Muestra mensajes por si hay error
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "Denegada la peticion de Geolocalización en el navegador."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "La información de la localización no esta disponible."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "El tiempo de petición ha expirado."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "Ha ocurrido un error desconocido."
+                break;
+        }
+    }
 }
