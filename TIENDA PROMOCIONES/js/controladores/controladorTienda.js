@@ -1768,6 +1768,7 @@ function listaTienda() {
                             <h5> <del>$ ${empresas[e].promociones[j].precio}  </del>$ ${promocion}</h5>
                             <p>${empresas[e].promociones[j].descripcion} </p>
                             <a class="btn hvr-hover" href="#">Agregar al Carrito</a>
+                            <a class="btn hvr-hover" href="#">Ver mas Detalles</a>
                         </div>
                     </div>
         

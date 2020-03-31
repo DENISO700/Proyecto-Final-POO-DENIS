@@ -1691,7 +1691,7 @@ function Celdas() {
 
                         <li><a href="#" data-toggle="tooltip" data-placement="right" title="Favoritos" onclick = "empFav(${j});"><i class="far fa-heart"></i></a></li>
                     </ul>
-                    <a class="cart" href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${j});Carrusel(${j});" >Ver Sucursales</a>
+                    <a class="cart" href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${j});cargarSucursales(${j}); " >Ver Sucursales</a>
                 </div>
             </div>
             <div class="why-text">
@@ -1755,7 +1755,7 @@ function lista() {
                                      
                                      </p>
                                                    
-                                 <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${j});Carrusel(${j});">Ver Sucursales</a>
+                                 <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${j});cargarSucursales(${j}); ">Ver Sucursales</a>
                                  <a class="btn hvr-hover" href="#" onclick = "empFav(${j});" > Agregar a Favoritos</a>
                                                
                             </div>
@@ -1779,7 +1779,7 @@ function lista() {
 
 ////////////////////////////////////
 
-//generar la modal
+//generar la modal para ver sucursales de las empresas 
 function Modal(k) {
 
 
@@ -1788,40 +1788,47 @@ function Modal(k) {
         `      
        
 
-          <div class="col-4 bg-danger p-1" style="height: 200px;"  >
-            <img src="${empresas[k].logo}" class="w-100 h-100 p-2 " >
+          <div class="col-4  p-1"   >
+            <img src="${empresas[k].logo}" class=" imagen-logo" >
           </div>
     
         <div class="col-4  datos-empresa">
-        
-            <h1>${empresas[k].nombreEmpresa}</h1>
-            <p> Correo: ${empresas[k].correo}</p>
-            <p>${empresas[k].descripcion}</p>
-            <p> Telefono: ${empresas[k].telefono}</p>
-            <p>${empresas[k].pais}</p>
+              <div class="datos-titulo">
+              <h1 >${empresas[k].nombreEmpresa}</h1>
+             </div>
+          
+              <p> Correo: ${empresas[k].correo}</p>
+             <p>${empresas[k].descripcion}</p>
+             <p> Telefono: ${empresas[k].telefono}</p>
+             <p>${empresas[k].pais}</p>
            
-        </div>
+         </div>
 
         <div class="col-4 redes-empresa">
 
-        <h1>Redes Sociales</h1>
+        <h1>REDES SOCIALES </h1>
         
          <div class="row ">
 
-           <p>${empresas[k].redesSociales[0].nombreRed1} </p>
-           <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url1}</p>
-          
+         <div class="col-12  datos-empresa">
+         <p> <a href=""><img src="/images/logo-de-facebook-png.png" class="red"></a>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url1} </p>
+
+        </div>
+
+                    
          </div>
          <div class="row ">
+         <div class="col-12  datos-empresa">
+         <p> <a href=""><img src="/images/logo-instagram.png" class="red"></a>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url2} </p>
 
-         <p>${empresas[k].redesSociales[0].nombreRed2} </p>
-         <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url2}</p>
+        </div>
         
        </div>
        <div class="row ">
+       <div class="col-12  datos-empresa">
+       <p> <a href=""><img src="/images/Logo-Twitter.png" class="red"></a>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url3} </p>
 
-       <p>${empresas[k].redesSociales[0].nombreRed3} </p>
-           <p>&nbsp&nbsp&nbsp&nbsp${empresas[k].redesSociales[0].url3}</p>
+      </div>
      </div>
     
        
@@ -1834,80 +1841,14 @@ function Modal(k) {
 
 
 
-    cargarmap(k, 0);
 
 
 
 
-}
-
-////////////////////////////////////////////////////////////////////////
-//Funcion que genra las imagenes
-function Carrusel(k) {
-
-
-    document.getElementById("img").innerHTML =
-        ` 
-
-        <div class="carousel-item  active sucursal-datos">
-    
-       
-        <div class="mt-2 p-2" >
-
-            <h5>${empresas[k].sucursales[0].nombreSucursal}</h5>
-            <p>${empresas[k].sucursales[0].correo}</p>
-            <p>${empresas[k].sucursales[0].redSocial}</p>
-            <p>${empresas[k].sucursales[0].url}</p>
-            <p>${empresas[k].sucursales[0].telefono}</p>
-            <p>${empresas[k].sucursales[0].direccion}</p>
-           
-           
-          </div>
-
-      </div>
-`
-
-
-    for (let i = 1; i < empresas[k].sucursales.length; i++) {
-
-        document.getElementById("img").innerHTML += `      
-        <div class="carousel-item sucursal-datos ">
-    
-       
-          <div class="mt-2 p-2" >
-
-              <h5 >${empresas[k].sucursales[i].nombreSucursal}</h5>
-              <p>${empresas[k].sucursales[i].correo}</p>
-              <p>${empresas[k].sucursales[i].redSocial}</p>
-              <p>${empresas[k].sucursales[i].url}</p>
-              <p>${empresas[k].sucursales[i].telefono}</p>
-              <p>${empresas[k].sucursales[i].direccion}</p>
-             
-             
-            </div>
-
-        </div>
-
-         
-  
-
-    
-  `
-
-        document.getElementById("carouselExampleControls").innerHTML +=
-            `
-<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" onclick="cargarmap(${k},${i});">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" onclick="cargarmap(${k},${i});">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>
-`
-    }
 
 }
+
+
 ///////////////////////////////////////////////////////////////////////
 
 function empFav(l) {
@@ -1938,22 +1879,21 @@ function empFav(l) {
 
 var x = document.getElementById("demo");
 
-function cargarmap(k, i) {
+function cargarmap(k) {
 
-    alert(k);
-    alert(i);
 
+    var locacion = document.getElementById("sucursal").value;
 
     navigator.geolocation.getCurrentPosition(showPosition, showError);
 
     //Funcion para mostrar posicion
     function showPosition(position) {
-        lat = empresas[k].sucursales[i].latitud; //Valor de la latitud
-        lon = empresas[k].sucursales[i].longitud; //Valor de la longitud
+        lat = empresas[k].sucursales[locacion].latitud; //Valor de la latitud
+        lon = empresas[k].sucursales[locacion].longitud; //Valor de la longitud
         latlon = new google.maps.LatLng(lat, lon)
         mapholder = document.getElementById('mapholder')
-        mapholder.style.height = '400px';
-        mapholder.style.width = '700px';
+        mapholder.style.height = '420px';
+        mapholder.style.width = '630px';
         var myOptions = {
             center: latlon,
             zoom: 10,
@@ -1964,9 +1904,6 @@ function cargarmap(k, i) {
         var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
         var marker = new google.maps.Marker({ position: latlon, map: map, title: "Aqui estamos!" });
     }
-
-
-
     //Funcion de Muestra mensajes por si hay error
     function showError(error) {
         switch (error.code) {
@@ -1984,4 +1921,76 @@ function cargarmap(k, i) {
                 break;
         }
     }
+
+
+}
+
+
+
+///////////////////////////////
+
+
+function cargarSucursales(k) {
+
+    document.getElementById("mapholder").innerHTML = "";
+    document.getElementById("date").innerHTML = "";
+
+    document.getElementById("img").innerHTML =
+        `
+    <select class="custom-select select" id="sucursal" onchange="cargarmap(${k});Carrusel(${k});">
+    <option selected>Sucursal</option>
+   
+  </select>
+    `
+
+
+    for (let i = 0; i < empresas[k].sucursales.length; i++) {
+
+
+
+        document.getElementById("sucursal").innerHTML +=
+
+            `  <option value="${i}">${empresas[k].sucursales[i].nombreSucursal}</option>`;
+
+
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+//Funcion que genra las imagenes
+function Carrusel(k) {
+
+
+
+
+    var sucu = document.getElementById("sucursal").value;
+
+    document.getElementById("date").innerHTML = `      
+        <div class=" sucursal-datos ">
+    
+       
+          <div class="mt-2 p-2 datos-sucursales-generales" >
+
+
+              <p class="da">Correo</p>
+              <p>${empresas[k].sucursales[sucu].correo}</p>
+              <p class="da"> Red Social</p>
+              <p>${empresas[k].sucursales[sucu].redSocial}</p>
+              <p>${empresas[k].sucursales[sucu].url}</p>
+              <p class="da">Telefono</p>
+              <p>${empresas[k].sucursales[sucu].telefono}</p>
+              <p class="da">Direccion</p>
+              <p>${empresas[k].sucursales[sucu].direccion}</p>
+             
+             
+            </div>
+
+        </div>
+
+       `
+
+
+
+
 }

@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body onload="update_qrcode();">
 
 
     <!-- CABEZERA -->
@@ -107,7 +107,10 @@
 
                 <div id="beauty" class="col-md-4">
                     <h2>Codigo QR</h2>
-                    <img src="/images/QR.png" width="123" height="123" /><br><br>
+                    <div id="qr">
+
+                    </div>
+
                     <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
                 </div>
 
@@ -146,7 +149,7 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- ALL PLUGINS -->
 <script src="js/jquery.superslides.min.js"></script>
-<script src="/js/custom.js"></script>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 
