@@ -1665,6 +1665,22 @@ if (localStorage.getItem("empresas") == null) {
 
 //////////////////////////////////////////////////////////////
 
+function cargarCategorias() {
+
+
+    for (let i = 0; i < categorias.length; i++) {
+
+
+
+        document.getElementById("categorias").innerHTML +=
+
+            `  <option value="${categorias[i]}">${categorias[i]}</option>`;
+
+
+    }
+
+}
+
 function nuevoProducto() {
 
     let producto = {
@@ -1690,3 +1706,46 @@ function nuevoProducto() {
     localStorage.setItem('empresas', JSON.stringify(empresas));
 
 }
+
+
+
+
+//////////////////////////////////////////
+
+//Funcion Cargar Precio
+
+function vistaPrevia() {
+
+    var foto = document.getElementById("foto").files[0].name;
+    var pathname = window.location.pathname;
+    alert(pathname);
+
+    alert(foto);
+
+    document.getElementById("img").innerHTML = `
+
+
+    <div class="col-md-12 ">
+    <img src="${foto}" class="w-100 ">
+    </div>
+
+`
+}
+
+
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('#blah').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#imgInp").change(function() {
+    readURL(this);
+});

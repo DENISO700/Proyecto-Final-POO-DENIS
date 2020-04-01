@@ -98,14 +98,14 @@
                         </div>
                         <div class="col-md-5 mb-3 ">
                             <div class="custom-file ">
-                                <input type="file" class="custom-file-input form-control" required id="logo">
+                                <input type='file' id="imgInp" class="custom-file-input form-control" onchange="readURL(this);" />
                                 <label class="custom-file-label mt-3">Seleccione el Logo de su Empresa</label>
                             </div>
 
                         </div>
                         <div class="col-md-2 mb-3 mt-3">
                             <div class="col-md-12 ">
-                                <img src="/images/log-placeholder.png" class="w-100 ">
+                                <img id="blah" src="/images/log-placeholder.png" alt="your image" class="w-100" />
                             </div>
                         </div>
 
@@ -211,14 +211,14 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control" id="logo1">
+                                <input type="file" class="custom-file-input form-control" id="logo1" onchange="readURL1(this);">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
 
                         <div class="col-md-2 mb-3 ">
                             <div class="col-md-12 mt-3 ">
-                                <img src="/images/log-placeholder.png" class="w-100">
+                                <img src="/images/log-placeholder.png" class="w-100" id="blah1">
                             </div>
                         </div>
 
@@ -243,14 +243,14 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control" id="logo2">
+                                <input type="file" class="custom-file-input form-control" id="logo2" onchange="readURL2(this);">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
 
                         <div class="col-md-2 mb-3 mt-3 ">
                             <div class="col-md-12 ">
-                                <img src="/images/log-placeholder.png" class="w-100">
+                                <img src="/images/log-placeholder.png" class="w-100" id="blah2">
                             </div>
                         </div>
 
@@ -275,14 +275,14 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control" id="logo3">
+                                <input type="file" class="custom-file-input form-control" id="logo3" onchange="readURL3(this);">
                                 <label class="custom-file-label mt-3">Banner</label>
                             </div>
                         </div>
 
                         <div class="col-md-2 mb-3 mt-3">
                             <div class="col-md-12">
-                                <img src="/images/log-placeholder.png" class="w-100">
+                                <img src="/images/log-placeholder.png" class="w-100" id="blah3">
                             </div>
                         </div>
 
@@ -426,6 +426,7 @@
 
 
         <!-- ALL JS FILES -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="/js/controladores/controladorRegistroEmpresa.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
