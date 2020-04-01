@@ -596,6 +596,56 @@ if (localStorage.getItem("empresas") == null) {
                             latitud: "25",
                             longitud: "45",
                         }],
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
                         imagenes: [
                             "images/gallery-img-12.jpg",
                             "images/gallery-img-12.jpg",
@@ -641,6 +691,56 @@ if (localStorage.getItem("empresas") == null) {
                             "images/gallery-img-01.jpg",
                         ],
 
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
+
                         Comentarios: [
 
                             {
@@ -680,6 +780,56 @@ if (localStorage.getItem("empresas") == null) {
                             "images/gallery-img-06.jpg",
                         ],
 
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
+
                         Comentarios: [
 
                             {
@@ -713,6 +863,56 @@ if (localStorage.getItem("empresas") == null) {
                             latitud: "25",
                             longitud: "45",
                         }],
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
                         imagenes: [
                             "images/gallery-img-09.jpg",
                             "images/gallery-img-09.jpg",
@@ -966,6 +1166,56 @@ if (localStorage.getItem("empresas") == null) {
                             latitud: "25",
                             longitud: "45",
                         }],
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
                         imagenes: [
                             "images/gallery-img-12.jpg",
                             "images/gallery-img-12.jpg",
@@ -1005,6 +1255,56 @@ if (localStorage.getItem("empresas") == null) {
                             latitud: "25",
                             longitud: "45",
                         }],
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
                         imagenes: [
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
@@ -1050,6 +1350,56 @@ if (localStorage.getItem("empresas") == null) {
                             "images/gallery-img-06.jpg",
                         ],
 
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
+
                         Comentarios: [
 
                             {
@@ -1089,6 +1439,56 @@ if (localStorage.getItem("empresas") == null) {
                             "images/gallery-img-09.jpg",
                             "images/gallery-img-09.jpg",
                         ],
+
+                        sucursales: [
+
+                            {
+                                nombreSucursal: "Variedades Darwin",
+                                correo: "example123@gmail.com",
+                                telefono: "2245-5689",
+                                pais: "Honduras",
+                                ciudad: "San Pedro Sula",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDarwin",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Peña",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Isaac",
+                                correo: "example1243@gmail.com",
+                                telefono: "2245-5656",
+                                pais: "Honduras",
+                                ciudad: "Tegucigalpa",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesIsaac",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Popular",
+                                latitud: 14.08481023,
+                                longitud: -87.1729061,
+
+                            },
+
+                            {
+                                nombreSucursal: "Variedades Denis",
+                                correo: "example12345@gmail.com",
+                                telefono: "2245-5646",
+                                pais: "Honduras",
+                                ciudad: "Comayagua",
+                                redSocial: "Facebook",
+                                url: "www.facebook.com/VariedadesDenis",
+                                banner: "/images/all-bg-title.jpg",
+                                direccion: "Col. La Cañada",
+                                latitud: 14.44778701,
+                                longitud: -87.63725817,
+
+                            }
+
+                        ],
+
 
                         Comentarios: [
 
@@ -1733,7 +2133,6 @@ if (localStorage.getItem("empresas") == null) {
 } else {
     empresas = JSON.parse(localStorage.getItem('empresas'));
 }
-
 //////////////////////////////////////////////////////////////
 
 
