@@ -539,7 +539,6 @@ if (localStorage.getItem("usuarios") == null) {
 }
 
 //////////////////////////////////////////////////////////////////////////
-
 if (localStorage.getItem("empresas") == null) {
 
     empresas = [
@@ -600,8 +599,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -615,8 +614,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -630,8 +629,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -970,8 +969,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -985,8 +984,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1000,8 +999,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1340,8 +1339,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -1355,8 +1354,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1370,8 +1369,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 

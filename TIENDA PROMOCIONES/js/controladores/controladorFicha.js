@@ -600,8 +600,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -615,8 +615,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -630,8 +630,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -970,8 +970,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -985,8 +985,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1000,8 +1000,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1340,8 +1340,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -1355,8 +1355,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1370,8 +1370,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1668,7 +1668,7 @@ if (localStorage.getItem("empresas") == null) {
 
 
 
-//////////////////////CONTROLADOR FICHA DE IMPRESAION////////////////////////
+//////////////////////CONTROLADOR FICHA DE IMPRESION////////////////////////
 
 //FUNCION PARA GENERAR PDF
 
@@ -3356,7 +3356,7 @@ var create_qrcode = function(text, typeNumber, errorCorrectLevel, table) {
 };
 
 var update_qrcode = function() {
-    var text = "https://www.youtube.com/?hl=es-419";
+    var text = "http://127.0.0.1:5500/detalleProducto.html";
 
     document.getElementById('qr').innerHTML = create_qrcode(text);
 };

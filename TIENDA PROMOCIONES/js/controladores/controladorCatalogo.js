@@ -600,8 +600,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -615,8 +615,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -630,8 +630,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -800,7 +800,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-                        categoria: "Anime",
+
                         nombre: "Figura de Kimetsu no Yaiba",
                         precio: 30.00,
                         porcentaje: 0.5,
@@ -855,7 +855,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-                        categoria: "Anime",
+
                         nombre: "Figura de Naruto",
                         precio: 50.00,
                         porcentaje: 0.3,
@@ -970,8 +970,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -985,8 +985,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1000,8 +1000,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1171,7 +1171,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-                        categoria: "Electronicos",
+
                         nombre: "Telefono",
                         precio: 300.00,
                         porcentaje: 0.4,
@@ -1226,7 +1226,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-                        categoria: "Electronicos",
+
                         nombre: "Laptop",
                         precio: 800.00,
                         porcentaje: 0.2,
@@ -1340,8 +1340,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDarwin",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Peña",
-                        latitud: "45",
-                        longitud: "54",
+                        latitud: 15.5079941,
+                        longitud: -88.02167773,
 
                     },
 
@@ -1355,8 +1355,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesIsaac",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Popular",
-                        latitud: "55",
-                        longitud: "64",
+                        latitud: 14.08481023,
+                        longitud: -87.1729061,
 
                     },
 
@@ -1370,8 +1370,8 @@ if (localStorage.getItem("empresas") == null) {
                         url: "www.facebook.com/VariedadesDenis",
                         banner: "/images/all-bg-title.jpg",
                         direccion: "Col. La Cañada",
-                        latitud: "65",
-                        longitud: "74",
+                        latitud: 14.44778701,
+                        longitud: -87.63725817,
 
                     }
 
@@ -1540,7 +1540,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-                        categoria: "Mobiliario",
+
                         nombre: "Mueble de Oficina",
                         precio: 200.00,
                         porcentaje: 0.4,
@@ -1595,7 +1595,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-                        categoria: "Mobiliario",
+
                         nombre: "Silla de Oficina",
                         precio: 150.00,
                         porcentaje: 0.4,
