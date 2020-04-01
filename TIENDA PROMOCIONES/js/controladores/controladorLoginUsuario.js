@@ -800,7 +800,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Anime",
                         nombre: "Figura de Kimetsu no Yaiba",
                         precio: 30.00,
                         porcentaje: 0.5,
@@ -855,7 +855,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Anime",
                         nombre: "Figura de Naruto",
                         precio: 50.00,
                         porcentaje: 0.3,
@@ -1171,7 +1171,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Electronicos",
                         nombre: "Telefono",
                         precio: 300.00,
                         porcentaje: 0.4,
@@ -1226,7 +1226,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Electronicos",
                         nombre: "Laptop",
                         precio: 800.00,
                         porcentaje: 0.2,
@@ -1285,6 +1285,7 @@ if (localStorage.getItem("empresas") == null) {
             },
 
             {
+
                 nombreEmpresa: "Termundo S.A",
                 logo: "/images/LogosEmpresas/logo2.jpg",
                 correo: "damarissevilla2005@gmail.com",
@@ -1540,7 +1541,7 @@ if (localStorage.getItem("empresas") == null) {
                 promociones: [
 
                     {
-
+                        categoria: "Mobiliario",
                         nombre: "Mueble de Oficina",
                         precio: 200.00,
                         porcentaje: 0.4,
@@ -1595,7 +1596,7 @@ if (localStorage.getItem("empresas") == null) {
                     },
 
                     {
-
+                        categoria: "Mobiliario",
                         nombre: "Silla de Oficina",
                         precio: 150.00,
                         porcentaje: 0.4,
@@ -1661,6 +1662,7 @@ if (localStorage.getItem("empresas") == null) {
 } else {
     empresas = JSON.parse(localStorage.getItem('empresas'));
 }
+
 
 
 //////////////////////////////////////////////////////////////
