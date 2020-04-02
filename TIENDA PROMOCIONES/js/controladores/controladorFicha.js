@@ -3876,7 +3876,7 @@ function Precio() {
             <div class="main2 col-md-4" id="foto">
               
     
-                <img src="${empresas[0].promociones[document.getElementById("productos").value].imagenes[0]}" class="w-100 my-5">
+                <img src="${empresas[0].promociones[document.getElementById("productos").value].imagenes[0]}" class="w-100 my-3">
     
             </div>
     
