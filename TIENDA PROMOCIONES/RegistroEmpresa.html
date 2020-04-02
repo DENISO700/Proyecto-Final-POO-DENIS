@@ -80,7 +80,8 @@
     <!-- Formulario -->
     <div class="container contenedor-form-empresa">
 
-        <form id="formulario-empresa">
+        <form id="formulario-empresa" onsubmit="return validarEmpresa();">
+
             <div class="row formulario">
                 <div class="col-md-9  col-12 contenido shadow p-3 mb-5 bg-light rounded m-auto">
                     <h2 class="text-center">Datos de la Empresa</h2>
@@ -290,34 +291,7 @@
                     <!-- Fin  -->
 
 
-                    <div class="col-md-12">
-                        <label class="form-control">Ubicacion Geografica</label>
-                        <hr>
-                    </div>
-                    <!-- Ubicacion Geografica -->
-                    <div class="row">
 
-                        <div class="col-md-4 mb-3">
-
-                            <input type="text" class="form-control" placeholder="Introduzca su Direccion" required id="direccion">
-
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-
-                            <input type="text" class="form-control" placeholder="Latitud" required id="latitud">
-
-                        </div>
-
-                        <div class="col-md-4 mb-3">
-
-                            <input type="text" class="form-control" placeholder="Longitud" required id="longitud">
-
-                        </div>
-
-
-                    </div>
-                    <!-- Fin  -->
 
                     <div class="col-md-12">
                         <label class="form-control">Plan del Servicio</label>
@@ -402,14 +376,11 @@
 
                     </div>
 
-
-
-
                     <!-- Enviar -->
 
                     <div class="row">
                         <div class="col-md-4 mx-auto">
-                            <button type="button" class="btn btn-danger" onclick="nuevaEmpresa();">Registrarse</button>
+                            <input type="submit" value="Registrarse">
 
                         </div>
 

@@ -521,9 +521,7 @@ if (localStorage.getItem("empresas") == null) {
 
                 ],
 
-                direccion: "Col. La Cañada",
-                latitud: "22",
-                longitud: "45",
+
 
                 formaDePago: "Credito",
                 nombrePropietario: "Denis Ordoñez",
@@ -587,15 +585,13 @@ if (localStorage.getItem("empresas") == null) {
                         categoria: "Anime",
                         nombre: "Figura de Anime",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
-
+                        imagenes: [
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                        ],
                         sucursales: [
 
                             {
@@ -645,45 +641,17 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-                        imagenes: [
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                        ],
 
-                        Comentarios: [
 
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Electronicos",
                         nombre: "Celular",
                         precio: 400.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
                         imagenes: [
                             "images/gallery-img-01.jpg",
                             "images/gallery-img-01.jpg",
@@ -738,41 +706,15 @@ if (localStorage.getItem("empresas") == null) {
                             }
 
                         ],
-
-
-                        Comentarios: [
-
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Mobiliario",
                         nombre: "Mesa",
                         precio: 200.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
                         imagenes: [
                             "images/gallery-img-06.jpg",
                             "images/gallery-img-06.jpg",
@@ -828,40 +770,20 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-
-                        Comentarios: [
-
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Vestimenta",
                         nombre: "Chaqueta",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
+                        imagenes: [
+                            "images/gallery-img-09.jpg",
+                            "images/gallery-img-09.jpg",
+                            "images/gallery-img-09.jpg",
+                        ],
 
                         sucursales: [
 
@@ -912,31 +834,9 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-                        imagenes: [
-                            "images/gallery-img-09.jpg",
-                            "images/gallery-img-09.jpg",
-                            "images/gallery-img-09.jpg",
-                        ],
 
-                        Comentarios: [
 
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
 
-                        ]
 
                     },
                 ],
@@ -1091,9 +991,6 @@ if (localStorage.getItem("empresas") == null) {
 
                 ],
 
-                direccion: "Col. La Cañada",
-                latitud: "22",
-                longitud: "45",
 
                 formaDePago: "Credito",
                 nombrePropietario: "Denis Ordoñez",
@@ -1157,15 +1054,13 @@ if (localStorage.getItem("empresas") == null) {
                         categoria: "Anime",
                         nombre: "Figura de Anime",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
-
+                        imagenes: [
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                        ],
                         sucursales: [
 
                             {
@@ -1215,45 +1110,22 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-                        imagenes: [
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                        ],
 
-                        Comentarios: [
 
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Electronicos",
                         nombre: "Celular",
                         precio: 400.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
+                        imagenes: [
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                        ],
 
                         sucursales: [
 
@@ -1303,46 +1175,15 @@ if (localStorage.getItem("empresas") == null) {
                             }
 
                         ],
-
-                        imagenes: [
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                        ],
-
-                        Comentarios: [
-
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Mobiliario",
                         nombre: "Mesa",
                         precio: 200.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
                         imagenes: [
                             "images/gallery-img-06.jpg",
                             "images/gallery-img-06.jpg",
@@ -1398,41 +1239,15 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-
-                        Comentarios: [
-
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
-
-                        ]
 
                     },
                     {
                         categoria: "Vestimenta",
                         nombre: "Chaqueta",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
 
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
                         imagenes: [
                             "images/gallery-img-09.jpg",
                             "images/gallery-img-09.jpg",
@@ -1489,25 +1304,8 @@ if (localStorage.getItem("empresas") == null) {
                         ],
 
 
-                        Comentarios: [
 
-                            {
-                                usuario: "Denis Ordoñez",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Darwin Rodas",
-                                calificacion: 3,
-                                contenido: "Lorem ipsum dolor . . . "
-                            },
-                            {
-                                usuario: "Isaac Ramirez",
-                                calificacion: 4,
-                                contenido: "Lorem ipsum dolor . . . "
-                            }
 
-                        ]
 
                     },
                 ],
@@ -1662,10 +1460,6 @@ if (localStorage.getItem("empresas") == null) {
 
                 ],
 
-                direccion: "Col. La Cañada",
-                latitud: "22",
-                longitud: "45",
-
                 formaDePago: "Credito",
                 nombrePropietario: "Denis Ordoñez",
                 numeroTarjeta: "505-405-5214-4512",
@@ -1728,15 +1522,13 @@ if (localStorage.getItem("empresas") == null) {
                         categoria: "Anime",
                         nombre: "Figura de Anime",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
-
+                        imagenes: [
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                            "images/gallery-img-12.jpg",
+                        ],
                         sucursales: [
 
                             {
@@ -1786,11 +1578,6 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-                        imagenes: [
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                            "images/gallery-img-12.jpg",
-                        ],
 
 
 
@@ -1799,14 +1586,14 @@ if (localStorage.getItem("empresas") == null) {
                         categoria: "Electronicos",
                         nombre: "Celular",
                         precio: 400.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
+                        imagenes: [
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                            "images/gallery-img-01.jpg",
+                        ],
 
                         sucursales: [
 
@@ -1856,27 +1643,20 @@ if (localStorage.getItem("empresas") == null) {
                             }
 
                         ],
-                        imagenes: [
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                            "images/gallery-img-01.jpg",
-                        ],
-
-
 
                     },
                     {
                         categoria: "Mobiliario",
                         nombre: "Mesa",
                         precio: 200.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
+                        imagenes: [
+                            "images/gallery-img-06.jpg",
+                            "images/gallery-img-06.jpg",
+                            "images/gallery-img-06.jpg",
+                        ],
 
                         sucursales: [
 
@@ -1925,12 +1705,6 @@ if (localStorage.getItem("empresas") == null) {
 
                             }
 
-                        ],
-
-                        imagenes: [
-                            "images/gallery-img-06.jpg",
-                            "images/gallery-img-06.jpg",
-                            "images/gallery-img-06.jpg",
                         ],
 
 
@@ -1939,14 +1713,14 @@ if (localStorage.getItem("empresas") == null) {
                         categoria: "Vestimenta",
                         nombre: "Chaqueta",
                         precio: 40.00,
-                        cantida: "24",
+                        cantida: 24,
                         descripcion: "Lorem ipsum dolor . . . ",
-                        calificacion: 2,
-                        ubicacion: [{
-                            direccion: "Col. La Cañada",
-                            latitud: "25",
-                            longitud: "45",
-                        }],
+
+                        imagenes: [
+                            "images/gallery-img-09.jpg",
+                            "images/gallery-img-09.jpg",
+                            "images/gallery-img-09.jpg",
+                        ],
 
                         sucursales: [
 
@@ -1997,16 +1771,13 @@ if (localStorage.getItem("empresas") == null) {
 
                         ],
 
-                        imagenes: [
-                            "images/gallery-img-09.jpg",
-                            "images/gallery-img-09.jpg",
-                            "images/gallery-img-09.jpg",
-                        ],
+
 
 
 
                     },
                 ],
+
 
                 promociones: [
 
@@ -2122,7 +1893,6 @@ if (localStorage.getItem("empresas") == null) {
                 ]
 
             },
-
 
         ],
 

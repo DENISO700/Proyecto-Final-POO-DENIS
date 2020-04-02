@@ -15,20 +15,6 @@ function campoVacio1() {
 
 
 ///////////////////////////////////////////////////////
-//Validacion de emails, con colores 
-
-function validarEmail(etiqueta) {
-    console.log(etiqueta.value);
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(etiqueta.value)) {
-        etiqueta.classList.remove('input-error');
-        etiqueta.classList.add('input-success');
-    } else {
-        etiqueta.classList.remove('input-success');
-        etiqueta.classList.add('input-error');
-    }
-}
-
 
 ///////////////////////////////////////////////////
 ///Validacion solo acepte numeros//////////////////////
@@ -54,20 +40,6 @@ function selectNoVacio() {
     }
 
 }
-
-
-////////////////////////////////////////////////////////////////
-///////Validacion Email Simple//////////////////////
-
-function emailValido() {
-
-    valor = document.getElementById("campo").value;
-    if (!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(valor))) {
-        return false;
-    }
-
-}
-
 
 ///////////////////////////////////////////////////////////////////////
 /////Validar una Fecha///////////////
@@ -105,17 +77,6 @@ function idUnico() {
 
 }
 
-///////////////////////////////////////////////////////////////
-//VALIDAR NUMERO DE TELEFONO//////////////
-
-function numeroValido() {
-
-    valor = document.getElementById("campo").value;
-    if (!(/^\d{9}$/.test(valor))) {
-        return false;
-    }
-
-}
 
 //////////////////////////////////////////////////////////////////////////
 ////////////////VALIDAR QUE UN CHECKBOX SEA SELECCIONADO /////
@@ -152,3 +113,78 @@ function radioValido() {
 }
 
 ////////////////////////////////////////////////////
+
+
+
+//VALIDACIONES DE REGISTRO USUARIO//
+
+function validarUsuario() {
+
+    valor = document.getElementById("correo").value;
+    valor2 = document.getElementById("contraseña").value;
+    valor3 = document.getElementById("telefono").value;
+    valor4 = document.getElementById("user").value;
+
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var re2 = /^([0-9])$/;
+
+    if (valor == null || valor.length == 0 || /^\s+$/.test(valor) || valor2 == null || valor2.length == 0 || /^\s+$/.test(valor2)) {
+        alert("Debe Rellenar todos los campos");
+        return false;
+    } else if (valor4.length > 10) {
+        alert("Usuario Demasiado Largo");
+        return false;
+    } else if (valor2.length > 8 || valor2.length < 4) {
+        alert("Contraseña debe tener entre 4-8 caracteres");
+        return false;
+    } else if (!(re.test(valor))) {
+        alert("Correo No  tiene formato  Valido ");
+        return false;
+    } else if (re2.test(valor3)) {
+        alert("Solo son permitidos Numeros en el campo Telefono ");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        nuevoUsuario();
+        return true
+    }
+
+
+}
+
+
+//VALIDACIONES REGISTRO EMPRESAS
+
+function validarEmpresa() {
+
+    valor = document.getElementById("correo").value;
+    valor2 = document.getElementById("contraseña").value;
+    valor3 = document.getElementById("telefono").value;
+    valor4 = document.getElementById("user").value;
+
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var re2 = /^([0-9])$/;
+
+    if (valor == null || valor.length == 0 || /^\s+$/.test(valor) || valor2 == null || valor2.length == 0 || /^\s+$/.test(valor2)) {
+        alert("Debe Rellenar todos los campos");
+        return false;
+    } else if (valor4.length > 10) {
+        alert("Usuario Demasiado Largo");
+        return false;
+    } else if (valor2.length > 8 || valor2.length < 4) {
+        alert("Contraseña debe tener entre 4-8 caracteres");
+        return false;
+    } else if (!(re.test(valor))) {
+        alert("Correo No  tiene formato  Valido ");
+        return false;
+    } else if (re2.test(valor3)) {
+        alert("Solo son permitidos Numeros en el campo Telefono ");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        nuevoUsuario();
+        return true
+    }
+
+
+}

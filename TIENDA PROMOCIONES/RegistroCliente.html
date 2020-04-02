@@ -75,16 +75,16 @@
 
         <div class="formulario">
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registrese</h1>
-            <form>
-                <input type="text" placeholder="Usuario" id="user" required>
+            <form onsubmit="return validarUsuario();">
+                <input type="text" placeholder="Usuario" id="user">
 
-                <input type="password" placeholder="Contraseña" required id="contraseña">
+                <input type="password" placeholder="Contraseña" id="contraseña">
 
-                <input type="email" placeholder="Correo Electronico" required id="correo">
+                <input type="email" placeholder="Correo Electronico" id="correo">
 
-                <input type="text" placeholder="Teléfono" required id="telefono">
+                <input type="text" placeholder="Teléfono" id="telefono">
 
-                <input type="button" value="Registrarse" onclick="nuevoUsuario();">
+                <input type="submit" value="Registrarse">
             </form>
         </div>
 
@@ -93,6 +93,7 @@
 
 
     <script src="/js/controladores/controladorRegistroUsuario.js"></script>
+    <script src="/js/controladorValidaciones.js"></script>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
