@@ -965,8 +965,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1020,8 +1020,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1536,8 +1536,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1591,8 +1591,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -2032,9 +2032,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
-
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
                             },
 
                         ],
@@ -2240,7 +2239,7 @@ function listaTienda() {
                             <h5> <del>$ ${empresas[e].promociones[j].precio}  </del>$ ${promocion}</h5>
                             <p>${empresas[e].promociones[j].descripcion} </p>
                             <a class="btn hvr-hover" href="#" onclick = "añadirCarrito(${e},${j});">Agregar al Carrito</a>
-                            <a class="btn hvr-hover" href="/detalleProducto.html">Ver mas Detalles</a>
+                            <a class="btn hvr-hover" href="#" data-toggle="modal" data-target="#exampleModalScrollable" style="cursor:pointer" onclick="Modal(${e},${j});cargarSucursales(${e},${j});">Ver mas Detalles</a>
                         </div>
                     </div>
         
@@ -2386,6 +2385,194 @@ function añadirCarrito(j, l) {
 
     usuarios[0].carrito.push(carrito);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+
+
+}
+
+
+//generar la modal para ver sucursales de las empresas 
+function Modal(k, j) {
+
+
+    document.getElementById("cuerpo").innerHTML =
+
+        `      
+       
+
+          <div class="col-4  p-1"   >
+            <img src="${empresas[k].promociones[j].imagenes[0]}" class=" imagen-logo" >
+          </div>
+    
+        <div class="col-4  datos-empresa">
+              <div class="datos-titulo">
+              <h1 >${empresas[k].promociones[j].nombre}</h1>
+             </div>
+          
+              <p> ${empresas[k].promociones[j].descripcion}</p>
+             <p> Precio: $ ${empresas[k].promociones[j].precio}</p>
+    
+           
+         </div>
+
+        <div class="col-4 redes-empresa">
+
+        <h1>PERIODO PROMOCION</h1>
+        
+         <div class="row ">
+
+         <div class="col-12  datos-empresa">
+         <p> Inicio: &nbsp&nbsp&nbsp&nbsp${empresas[k].promociones[j].inicio} </p>
+
+        </div>
+
+                    
+         </div>
+         <div class="row ">
+         <div class="col-12  datos-empresa">
+         <p>Final: &nbsp&nbsp&nbsp&nbsp${empresas[k].promociones[j].final} </p>
+
+        </div>
+        
+       </div>
+     
+     </div>
+    
+       
+    </div>
+
+      
+        <hr>
+    
+    `;
+
+
+
+
+
+
+
+
+}
+
+
+///////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+
+var x = document.getElementById("demo");
+
+function cargarmap(k, j) {
+
+
+    var locacion = document.getElementById("sucursal").value;
+
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+    //Funcion para mostrar posicion
+    function showPosition(position) {
+        lat = empresas[k].promociones[j].sucursales[locacion].latitud; //Valor de la latitud
+        lon = empresas[k].promociones[j].sucursales[locacion].longitud; //Valor de la longitud
+        latlon = new google.maps.LatLng(lat, lon)
+        mapholder = document.getElementById('mapholder')
+        mapholder.style.height = '420px';
+        mapholder.style.width = '630px';
+        var myOptions = {
+            center: latlon,
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeControl: false,
+            navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+        };
+        var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+        var marker = new google.maps.Marker({ position: latlon, map: map, title: "Aqui estamos!" });
+    }
+    //Funcion de Muestra mensajes por si hay error
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "Denegada la peticion de Geolocalización en el navegador."
+                break;
+            case error.POSITION_UNAVAILABLE:
+                x.innerHTML = "La información de la localización no esta disponible."
+                break;
+            case error.TIMEOUT:
+                x.innerHTML = "El tiempo de petición ha expirado."
+                break;
+            case error.UNKNOWN_ERROR:
+                x.innerHTML = "Ha ocurrido un error desconocido."
+                break;
+        }
+    }
+
+
+}
+
+
+
+///////////////////////////////
+
+
+function cargarSucursales(k, j) {
+
+    document.getElementById("mapholder").innerHTML = "";
+    document.getElementById("date").innerHTML = "";
+
+    document.getElementById("img").innerHTML =
+        `
+    <select class="custom-select select" id="sucursal" onchange="cargarmap(${k},${j});Carrusel(${k},${j});">
+    <option selected>Sucursal</option>
+   
+  </select>
+    `
+
+
+    for (let i = 0; i < empresas[k].promociones[j].sucursales.length; i++) {
+
+
+
+        document.getElementById("sucursal").innerHTML +=
+
+            `  <option value="${i}">${empresas[k].sucursales[i].nombreSucursal}</option>`;
+
+
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////
+//Funcion que genra las imagenes
+function Carrusel(k, j) {
+
+
+
+
+    var sucu = document.getElementById("sucursal").value;
+
+    document.getElementById("date").innerHTML = `      
+        <div class=" sucursal-datos ">
+    
+       
+          <div class="mt-2 p-2 datos-sucursales-generales" >
+
+
+              <p class="da">Correo</p>
+              <p>${empresas[k].promociones[j].sucursales[sucu].correo}</p>
+              <p class="da"> Red Social</p>
+              <p>${empresas[k].promociones[j].sucursales[sucu].redSocial}</p>
+              <p>${empresas[k].promociones[j].sucursales[sucu].url}</p>
+              <p class="da">Telefono</p>
+              <p>${empresas[k].promociones[j].sucursales[sucu].telefono}</p>
+              <p class="da">Direccion</p>
+              <p>${empresas[k].promociones[j].sucursales[sucu].direccion}</p>
+             
+             
+            </div>
+
+        </div>
+
+       `
+
 
 
 

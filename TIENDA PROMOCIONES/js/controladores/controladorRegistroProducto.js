@@ -965,8 +965,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1020,8 +1020,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1536,8 +1536,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -1591,8 +1591,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
 
                             },
 
@@ -2032,9 +2032,8 @@ if (localStorage.getItem("empresas") == null) {
                                 url: "www.facebook.com/VariedadesDarwin",
                                 banner: "/images/all-bg-title.jpg",
                                 direccion: "Col. La Peña",
-                                latitud: "45",
-                                longitud: "54",
-
+                                latitud: 15.5079941,
+                                longitud: -88.02167773,
                             },
 
                         ],
@@ -2155,6 +2154,12 @@ function cargarCategorias() {
 
 function nuevoProducto() {
 
+    var div1 = document.getElementById("blah");
+    var align = div1.getAttribute("src");
+
+
+
+    alert(document.getElementById("ruta").innerHTML);
     let producto = {
         categoria: document.getElementById('categorias').value,
         nombre: document.getElementById('nombreProducto').value,
@@ -2167,9 +2172,9 @@ function nuevoProducto() {
             longitud: document.getElementById('longitud').value,
         }],
         imagenes: [
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
-            document.getElementById('foto').value,
+            align,
+            align,
+            align,
         ],
 
 
@@ -2213,6 +2218,7 @@ function readURL(input) {
         reader.onload = function(e) {
             $('#blah').attr('src', e.target.result);
         }
+
 
         reader.readAsDataURL(input.files[0]);
     }
