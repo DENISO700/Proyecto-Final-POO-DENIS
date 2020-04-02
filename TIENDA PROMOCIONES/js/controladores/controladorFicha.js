@@ -3832,3 +3832,136 @@ var update_qrcode = function() {
 };
 
 //////////////////////////////////////////////////////////////////////////
+
+
+function Precio() {
+
+    if (document.getElementById("productos").value != -1) {
+
+        document.getElementById("ficha").innerHTML = "";
+
+        var descuento = empresas[0].promociones[document.getElementById("productos").value].porcentaje * 100;
+
+        document.getElementById("ficha").innerHTML =
+            `
+        <div class="container col-md-8 mt-5">
+    
+        <div class="row">
+    
+            <div class="col-md-6">
+                <h1>Ficha de Promocion</h1>
+            </div>
+    
+            <div class="col-md-6 ml-auto">
+                <span class="descuento">${descuento} % </span>
+            </div>
+        </div>
+    
+        <div class="row" style="background-color: wheat;">
+    
+            <div id="beauty" class="col-md-4">
+                <h2>Codigo QR</h2>
+                <div id="qr" class="ml-3">
+    
+                </div>
+    
+                <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
+            </div>
+    
+            <div class="main col-md-4">
+                <h2>${empresas[0].promociones[document.getElementById("productos").value].nombre}</h2>
+                <p>${empresas[0].promociones[document.getElementById("productos").value].descripcion}</p>
+            </div>
+    
+            <div class="main2 col-md-4" id="foto">
+              
+    
+                <img src="${empresas[0].promociones[document.getElementById("productos").value].imagenes[0]}" class="w-100 my-5">
+    
+            </div>
+    
+    
+        </div>
+    
+    </div>
+        
+        `
+
+        update_qrcode();
+
+    } else {
+
+        document.getElementById("ficha").innerHTML = "";
+
+        document.getElementById("ficha").innerHTML =
+            `
+        <div class="container col-md-8 mt-5">
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h1>Ficha de Promocion</h1>
+            </div>
+
+            <div class="col-md-6 ml-auto">
+                <span class="descuento">50%</span>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: wheat;">
+
+            <div id="beauty" class="col-md-4">
+                <h2>Codigo QR</h2>
+                <div id="qr" class="ml-3">
+
+                </div>
+
+                <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
+            </div>
+
+            <div class="main col-md-4">
+                <h2>Nombre del Producto</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum at beatae recusandae aperiam sed, et unde alias officiis dolores, eius numquam! Alias obcaecati, sequi exercitationem mollitia amet harum nam ullam quaerat at et
+                </p>
+            </div>
+
+            <div class="main2 col-md-4" id="foto">
+                <h2>Foto Producto</h2>
+
+                <img src="/images/logotipo.png" width="100" height="100" />
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+        `
+        update_qrcode();
+
+    }
+
+
+
+
+}
+
+///////////////////////////////////////////////////////////////////////
+
+//Funcion para cargar categorias
+function cargarProductos() {
+
+
+    for (let i = 0; i < empresas[0].promociones.length; i++) {
+
+
+
+        document.getElementById("productos").innerHTML +=
+
+            `  <option value="${i}">${empresas[0].promociones[i].nombre}</option>`;
+
+
+    }
+
+}

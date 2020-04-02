@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="update_qrcode();">
+<body onload="update_qrcode();cargarProductos() ">
 
 
     <!-- CABEZERA -->
@@ -72,13 +72,14 @@
 
                 <!-- Datos Generales -->
                 <div class="row">
-                    <div class=" col-md-5 mb-3 mt-5">
-                        <input class="form-control" type="text" placeholder="Nombre del Producto" required>
+                    <div class=" col-md-5 mb-3 mt-5 mx-auto">
+                        <select class="custom-select mt-2" id="productos" onchange="Precio();">
+                            <option value ="-1"selected>Nombre Producto</option>
+                          
+                          </select>
                     </div>
-                    <div class="col-md-5 mb-3 mt-5">
-                        <button type="button" class="btn btn-danger">Buscar</button>
 
-                    </div>
+
                 </div>
                 <!-- Fin  -->
 
@@ -88,7 +89,7 @@
 
 
     <!-- FICHA -->
-    <div class="canvas_div_pdf">
+    <div class="canvas_div_pdf" id="ficha">
 
         <div class="container col-md-8 mt-5">
 
@@ -120,7 +121,7 @@
                     </p>
                 </div>
 
-                <div class="main2 col-md-4">
+                <div class="main2 col-md-4" id="foto">
                     <h2>Foto Producto</h2>
 
                     <img src="/images/logotipo.png" width="100" height="100" />
