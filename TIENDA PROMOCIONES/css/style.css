@@ -1040,7 +1040,7 @@
     /*------------------------------------------------------------------Marcador de Pagina-------------------------------------------------------------------*/
     
     .all-title-box {
-        background: url("../images/all-bg-title.jpg") no-repeat center center;
+        background: url("../images/fondo3.jpeg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -ms-background-size: cover;
@@ -2044,7 +2044,7 @@
     
     .datos-titulo {
         border-style: solid;
-        border-color: blue;
+        border-color: rgba(27, 34, 131, 0.795);
         background-color: darkgray;
         text-align: center;
         vertical-align: middle;
@@ -2055,7 +2055,7 @@
     }
     
     .redes-empresa h1 {
-        color: blue;
+        color: rgba(27, 34, 131, 0.795);
         font-weight: bold;
     }
     
