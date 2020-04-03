@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body onload="update_qrcode();cargarProductos()">
 
 
     <!-- CABEZERA -->
@@ -62,76 +62,93 @@
     </div>
     <!-- FIN MARCADOR -->
 
+    <div class="container">
 
-    <!--  FORMULARIO -->
-    <form id="formulario-empresa">
-        <div class="row formulario">
-            <div class="col-md-9  col-12 contenido shadow p-3 mb-5 bg-light rounded m-auto">
-                <h2 class="text-center">Datos de la Promocion</h2>
-                <hr>
+        <div class="row  p-2">
+
+            <div class="col-md-12  col-12 contenido  m-auto bg-success" style="background-color: darkgray;">
 
                 <!-- Datos Generales -->
-                <div class="row">
-                    <div class=" col-md-5 mb-3 mt-5">
-                        <input class="form-control" type="text" placeholder="Nombre del Producto" required>
-                    </div>
-                    <div class="col-md-5 mb-3 mt-5">
-                        <button type="button" class="btn btn-danger">Buscar</button>
 
+                <div class="row" style="background-color: darkgray;">
+                    <div class=" col-md-5 mb-1 mt-5 mx-auto" style="background-color: darkgray;">
+                        <h1 class="text-center redes-empresa">Datos de la Promocion</h1>
+                        <select class="custom-select mt-2" id="productos" onchange="ficha();">
+                            <option value ="-1"selected>Nombre Producto</option>
+                        </select>
                     </div>
+
+
                 </div>
                 <!-- Fin  -->
 
+                <div class="row">
 
-    </form>
-    <!-- FIN FORMULARIO -->
+                    <div class="canvas_div_pdf col-12 p-2" id="ficha" style="background-color: darkgray;">
+
+                        <div class="container col-md-8 mt-3" style="background-color: darkgray;">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <h1>Ficha de Promocion</h1>
+                                </div>
+
+                                <div class="col-md-6 ml-auto">
+                                    <span class="descuento">50%</span>
+                                </div>
+                            </div>
+
+                            <div class="row" style="background-color: rgba(177, 27, 27, 0.61);">
+
+                                <div id="beauty" class="col-md-4">
+                                    <h2>Codigo QR</h2>
+                                    <div id="qr" class="ml-3">
+
+                                    </div>
+
+                                    <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
+                                </div>
+
+                                <div class="main col-md-4">
+                                    <h2>Nombre del Producto</h2>
+                                    <p>Lorem ionem mollitia amet harum nam ullam quaerat at et
+                                    </p>
+                                </div>
+
+                                <div class="main2 col-md-4" id="foto">
+                                    <h2>Foto Producto</h2>
+
+                                    <img src="/images/logotipo.png" width="100" height="100" />
+
+                                </div>
 
 
-    <!-- FICHA -->
-    <div class="canvas_div_pdf">
+                            </div>
 
-        <div class="container col-md-8 mt-5">
+                        </div>
 
-            <div class="row">
 
-                <div class="col-md-6">
-                    <h1>Ficha de Promocion</h1>
+                    </div>
+
                 </div>
 
-                <div class="col-md-6 ml-auto">
-                    <span class="descuento">50%</span>
-                </div>
+
             </div>
 
-            <div class="row" style="background-color: wheat;">
-
-                <div id="beauty" class="col-md-4">
-                    <h2>Codigo QR</h2>
-                    <img src="/images/QR.png" width="123" height="123" /><br><br>
-                    <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
-                </div>
-
-                <div class="main col-md-4">
-                    <h2>Nombre del Producto</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum at beatae recusandae aperiam sed, et unde alias officiis dolores, eius numquam! Alias obcaecati, sequi exercitationem mollitia amet harum nam ullam quaerat at et
-                    </p>
-                </div>
-
-                <div class="main2 col-md-4">
-                    <h2>Foto Producto</h2>
-
-                    <img src="/images/logotipo.png" width="100" height="100" />
-
-                </div>
-
-
-            </div>
 
         </div>
 
 
+
     </div>
-    <!-- FIN FICHA -->
+
+
+
+
+
+
+
 
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
@@ -140,13 +157,13 @@
 
 </body>
 <!-- ALL JS FILES -->
-<script src="/js/controladorContenido.js"></script>
+<script src="/js/controladores/controladorFicha.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- ALL PLUGINS -->
 <script src="js/jquery.superslides.min.js"></script>
-<script src="/js/custom.js"></script>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 

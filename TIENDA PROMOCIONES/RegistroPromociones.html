@@ -62,7 +62,7 @@
     <!-- Formulario -->
     <div class="container contenedor-form-empresa">
 
-        <form id="formulario-empresa">
+        <form id="formulario-empresa" onsubmit="return validarPromocion();">
             <div class="row formulario">
                 <div class="col-md-9  col-12 contenido shadow p-3 mb-5 bg-light rounded m-auto">
                     <h2 class="text-center">Datos de la Promocion</h2>
@@ -85,10 +85,13 @@
 
                         <div class="col-md-3 mb-3 mt-5">
 
-                            <input type="text" id="precioproducto" class="form-control" placeholder="Precio">
+                            <input type="text" id="precioproducto" class="form-control" placeholder="Precio" disabled=disabled>
                         </div>
 
                         <div class="col-md-4 mb-3 " id="img">
+                            <div class="col-md-12 ">
+                                <img src="/images/log-placeholder.png" class="w-100 ">
+                            </div>
 
                         </div>
 
@@ -146,7 +149,7 @@
 
 
 
-                    <!-- Tipo de Plan -->
+                    <!-- Sucursales -->
 
                     <div class="row mb-5">
                         <div class="col-sm-9 col-lg-9 mb-3 m-auto">
@@ -190,8 +193,7 @@
 
                     <div class="row">
                         <div class="col-md-4 mx-auto">
-                            <button type="button" class="btn btn-danger" onclick="nuevaPromocion();">Danger</button>
-
+                            <input type="submit" value="Registrar Promocion">
                         </div>
 
                     </div>
@@ -206,7 +208,8 @@
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
         <!-- ALL JS FILES -->
-        <script src="/js/controladorContenido.js"></script>
+        <script src="/js/controladores/controladorRegistroPromocion.js"></script>
+        <script src="/js/controladorValidaciones.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

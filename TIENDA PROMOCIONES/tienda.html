@@ -200,10 +200,102 @@
     </div>
     <!-- Fin Comentarios -->
 
+
+    <!-- Modal Vista Previa -->
+
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable" role="document">
+            <div class="modal-content ">
+
+
+
+                <div class="modal-body " style="background-color: darkgray;">
+
+                    <div class="container p-3 datos-ser">
+
+                        <div class="row">
+                            <div class="col-12  text-left" style="background-color: darkgray;">
+                                <h1 id="exampleModalLabel" class="titulo-Sucursal">DETALLES <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span style="font-weight: bold;">X</span></button></h1>
+                                <hr>
+                            </div>
+                        </div>
+
+                        <div class="row " id="cuerpo">
+
+                        </div>
+
+                        <div class="row mb-3 " id="carrusel" style="height: 500px;">
+
+
+                            <div class="col-4  p-3">
+
+
+
+
+                                <div style="height: 50px;" id="img">
+
+
+                                </div>
+
+
+                                <div class="datos-sucursal" style="height: 450px;" id="date">
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="col-8">
+                                <div class=" my-3 p-3 " style="width: 680px;" id="coor">
+                                    <div id="demo">
+                                        <h1 style="text-align: center;">Ubicacion de la Sucursal</h1>
+                                    </div>
+                                    <div id="mapholder" class="m-auto " style="height: 420px;">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <!-- FinModal Vista Previa -->
+
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
     <!-- ALL JS FILES -->
-    <script src="/js/controladorContenido.js"></script>
+    <!-- ALL JS FILES -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false">
+        //API de Google Maps
+    </script>
+    <script src="/js/controladores/controladorTienda.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
