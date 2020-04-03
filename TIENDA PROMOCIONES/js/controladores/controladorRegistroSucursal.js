@@ -1913,6 +1913,9 @@ if (localStorage.getItem("empresas") == null) {
 
 function nuevaSucursal() {
 
+    var div1 = document.getElementById("blah");
+    var align = div1.getAttribute("src");
+
     let sucursal = {
 
 
@@ -1923,7 +1926,7 @@ function nuevaSucursal() {
         ciudad: document.getElementById('ciudad').value,
         redSocial: document.getElementById('red').value,
         url: document.getElementById('url').value,
-        banner: document.getElementById('logo').value,
+        banner: align,
         direccion: document.getElementById('direccionSucursal').value,
         latitud: document.getElementById('latitud').value,
         longitud: document.getElementById('longitud').value,

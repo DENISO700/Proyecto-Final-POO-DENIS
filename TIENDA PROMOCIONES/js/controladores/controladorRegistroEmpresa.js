@@ -1933,10 +1933,23 @@ function CargarPlanes() {
 
 function nuevaEmpresa() {
 
+    var div1 = document.getElementById("blah");
+    var align = div1.getAttribute("src");
+
+    var div2 = document.getElementById("blah1");
+    var align2 = div1.getAttribute("src");
+
+    var div2 = document.getElementById("blah2");
+    var align2 = div1.getAttribute("src");
+
+    var div3 = document.getElementById("blah3");
+    var align3 = div1.getAttribute("src");
+
+
     let empresa = {
 
         nombreEmpresa: document.getElementById('nombre').value,
-        logo: document.getElementById('logo').value,
+        logo: align,
         correo: document.getElementById('correo').value,
         contraseña: document.getElementById('contraseña').value,
         descripcion: document.getElementById('descripcion').value,
@@ -1948,12 +1961,12 @@ function nuevaEmpresa() {
         redesSociales: [{
             nombreRed1: document.getElementById('red1').value,
             url1: document.getElementById('url1').value,
-            banner1: document.getElementById('logo1').value,
+            banner1: align2,
             nombreRed2: document.getElementById('red2').value,
-            url2: document.getElementById('url2').value,
+            url2: align3,
             banner2: document.getElementById('logo2').value,
             nombreRed3: document.getElementById('red3').value,
-            url3: document.getElementById('url3').value,
+            url3: align3,
             banner3: document.getElementById('logo3').value,
         }],
         formaDePago: document.getElementById('formaPago').value,
@@ -1968,6 +1981,9 @@ function nuevaEmpresa() {
     };
     empresas.push(empresa);
     localStorage.setItem('empresas', JSON.stringify(empresas));
+
+    alert("Empresa agregado con exito");
+    location.href = 'index.html';
 
 }
 

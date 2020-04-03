@@ -61,7 +61,7 @@
     <!-- Formulario Sucursal-->
     <div class="container contenedor-form-empresa">
 
-        <form id="formulario-empresa">
+        <form id="formulario-empresa" onsubmit="return validarSucursal();">
             <div class="row formulario">
                 <div class="col-md-9  col-12 contenido shadow p-3 mb-5 bg-light rounded m-auto">
                     <h2 class="text-center">Datos de la Sucursal</h2>
@@ -93,7 +93,7 @@
                     <!-- Contacto -->
                     <div class="row">
                         <div class=" col-md-4  mb-3">
-                            <input type="text" class="form-control" placeholder="Numero Telefonico" required id="telefono">
+                            <input type="text" class="form-control" placeholder="Numero Telefonico" required id="telefono" onkeypress='return validaNumericos(event)'>
                         </div>
                         <div class="col-md-4 mb-3 mt-3">
                             <select name="contry" class="custom-select  w-100" required id="pais">
@@ -134,7 +134,7 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" required id="url">
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
@@ -169,13 +169,13 @@
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Latitud" required id="latitud">
+                            <input type="text" class="form-control" placeholder="Latitud" required id="latitud" onkeypress="return esNum(event,this)">
 
                         </div>
 
                         <div class="col-md-4 mb-3">
 
-                            <input type="text" class="form-control" placeholder="Longitud" required id="longitud">
+                            <input type="text" class="form-control" placeholder="Longitud" required id="longitud" onkeypress="return esNum(event,this)">
 
                         </div>
 
@@ -188,7 +188,7 @@
 
                     <div class="row">
                         <div class="col-md-4 mx-auto">
-                            <button type="button" class="btn btn-danger" onclick="nuevaSucursal();">Agregar</button>
+                            <input type="submit" value="Registrar Sucursal">
 
                         </div>
 
@@ -202,14 +202,6 @@
         <!-- Fin Formulario Sucursal-->
 
 
-        <div class="row">
-            <div class="col-md-4 mx-auto bg-ligth">
-                CopyRigth 2020
-
-            </div>
-
-        </div>
-
 
 
         <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
@@ -217,12 +209,13 @@
         <!-- ALL JS FILES -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="/js/controladores/controladorRegistroSucursal.js"></script>
+        <script src="/js/controladorValidaciones.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!-- ALL PLUGINS -->
         <script src="js/jquery.superslides.min.js"></script>
-        <script src="js/custom.js"></script>
+
 
 
 

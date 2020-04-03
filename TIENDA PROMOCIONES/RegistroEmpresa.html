@@ -95,11 +95,11 @@
                     <!-- Datos Generales -->
                     <div class="row">
                         <div class=" col-md-5 mb-3">
-                            <input class="form-control" type="text" placeholder="Nombre de la Empresa" required id="nombre">
+                            <input class="form-control" type="text" placeholder="Nombre de la Empresa" id="nombre" required>
                         </div>
                         <div class="col-md-5 mb-3 ">
                             <div class="custom-file ">
-                                <input type='file' id="imgInp" class="custom-file-input form-control" onchange="readURL(this);" />
+                                <input type='file' id="imgInp" class="custom-file-input form-control" onchange="readURL(this);" required/>
                                 <label class="custom-file-label mt-3">Seleccione el Logo de su Empresa</label>
                             </div>
 
@@ -115,13 +115,14 @@
                     <div class="row">
                         <div class="col-md-7 mb-3">
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Correo Electronico" required id="correo">
+                                <input type="email" class="form-control" placeholder="Correo Electronico" id="correo" required>
                             </div>
                         </div>
                         <div class="col-md-5 mb-3">
                             <div class="mb-3">
                                 <div style="display: flex">
-                                    <input type="password" class="form-control" placeholder="Contraseña" required><span id="contraseña"><i class="iconopas fas fa-eye"></i></span></div>
+                                    <input type="password" class="form-control" placeholder="Contraseña" id="contraseña" required>
+                                </div>
 
                             </div>
                         </div>
@@ -135,7 +136,7 @@
                     <!-- Descripcion -->
                     <div class="row">
                         <div class=" mx-auto mb-3">
-                            <textarea class="m-auto descripcion" rows="5" cols="100" placeholder="Ingrese su Descripcion" required id="descripcion"></textarea>
+                            <textarea class="m-auto descripcion" rows="5" cols="100" placeholder="Ingrese su Descripcion" id="descripcion" required></textarea>
                         </div>
                     </div>
                     <!-- Fin  -->
@@ -148,12 +149,12 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <div class="mb-3">
-                                <input type="text" class="form-control" style="height: 100px;" placeholder="Mision" required id="mision">
+                                <input type="text" class="form-control" style="height: 100px;" placeholder="Mision" id="mision" required>
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="mb-3">
-                                <input type="text" class="form-control" style="height: 100px;" placeholder="Vision" required id="vision">
+                                <input type="text" class="form-control" style="height: 100px;" placeholder="Vision" id="vision" required>
                             </div>
                         </div>
 
@@ -167,10 +168,10 @@
                     <!-- Contacto -->
                     <div class="row">
                         <div class=" col-md-4  mb-3">
-                            <input type="text" class="form-control" placeholder="Numero Telefonico" required id="telefono">
+                            <input type="text" class="form-control" placeholder="Numero Telefonico" id="telefono" onkeypress='return validaNumericos(event)' required>
                         </div>
                         <div class="col-md-4 mb-3 mt-3">
-                            <select class="custom-select  w-100" required id="pais">
+                            <select class="custom-select  w-100" id="pais">
                                 <option value="">Pais</option>
                                 <option value="Honduras">Honduras</option>
                                 <option value="Guatemala">Guatemala</option>
@@ -181,7 +182,7 @@
                               </select>
                         </div>
                         <div class="col-md-4 mt-3 mb-3">
-                            <select class="custom-select  w-100" required id="ciudad">
+                            <select class="custom-select  w-100" id="ciudad">
                                   <option >Ciudad</option>
                                   <option value="Tegucigalpa">Tegucigalpa</option>
                                 </select>
@@ -208,7 +209,7 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url1">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url1" required>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
@@ -240,7 +241,7 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url2">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url2" required>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
@@ -272,7 +273,7 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url3">
+                            <input type="url" class="form-control   mr-3 w-100" placeholder="url" id="url3" required>
                         </div>
                         <div class="col-md-4 mb-3">
                             <div class="custom-file">
@@ -306,53 +307,53 @@
                                 <div class="title-left">
                                     <h3>Forma de Pago</h3>
                                 </div>
-                                <form class="needs-validation" novalidate>
-                                    <hr class="mb-4">
 
-                                    <select class="custom-select  w-100" required id="formaPago">
+                                <hr class="mb-4">
+
+                                <select class="custom-select  w-100" id="formaPago">
                                         <option value="">Forma de Pago</option>
                                         <option value="Credito">Tarjeta de Credito</option>
                                         <option value="Debito">Tarjeta de Debito</option>
                                         
                                       </select>
 
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
 
-                                            <input type="text" class="form-control" placeholder="Nombre de Propietario" required id="propietario">
+                                        <input type="text" class="form-control" placeholder="Nombre de Propietario" id="propietario" required>
 
-                                        </div>
-                                        <div class="col-md-6 mb-3">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
 
-                                            <input type="text" class="form-control" placeholder="Numero de tarjeta" required id="numeroTarjeta">
+                                        <input type="text" class="form-control" placeholder="Numero de tarjeta" id="numeroTarjeta" onkeypress='return validaNumericos(event)' maxlength="14" minlength="14" required>
 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+
+                                        <input type="text" class="form-control" placeholder="Vencimiento" id="Vencimiento" maxlength="5" minlength="5" required>
+
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+
+                                        <input type="text" class="form-control" id="CCV" placeholder="CVV" onkeypress='return validaNumericos(event)' maxlength="4" minlength="3" required>
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="payment-icon">
+                                            <ul>
+                                                <li><img class="img-fluid" src="images/payment-icon/1.png" alt=""></li>
+                                                <li><img class="img-fluid" src="images/payment-icon/2.png" alt=""></li>
+                                                <li><img class="img-fluid" src="images/payment-icon/3.png" alt=""></li>
+                                                <li><img class="img-fluid" src="images/payment-icon/5.png" alt=""></li>
+                                                <li><img class="img-fluid" src="images/payment-icon/7.png" alt=""></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-3 mb-3">
+                                </div>
+                                <hr class="mb-1">
 
-                                            <input type="text" class="form-control" placeholder="Vencimiento" required id="Vencimiento">
-
-                                        </div>
-                                        <div class="col-md-3 mb-3">
-
-                                            <input type="text" class="form-control" id="CCV" placeholder="CVV" required>
-
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <div class="payment-icon">
-                                                <ul>
-                                                    <li><img class="img-fluid" src="images/payment-icon/1.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/2.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/3.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/5.png" alt=""></li>
-                                                    <li><img class="img-fluid" src="images/payment-icon/7.png" alt=""></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr class="mb-1">
-                                </form>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 col-lg-12">
@@ -360,7 +361,7 @@
                                         <div class="title-left">
                                             <h3>Plan </h3>
                                         </div>
-                                        <select class="custom-select  w-100 mb-5" required id="plan">
+                                        <select class="custom-select  w-100 mb-5" id="plan">
                                             <option value="">Plan</option>
                                          
                                        
@@ -399,6 +400,7 @@
         <!-- ALL JS FILES -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="/js/controladores/controladorRegistroEmpresa.js"></script>
+        <script src="/js/controladorValidaciones.js"></script>
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
