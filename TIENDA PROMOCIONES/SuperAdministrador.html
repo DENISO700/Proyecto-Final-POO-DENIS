@@ -189,7 +189,7 @@
         </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form onsubmit="return validarPlan();">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
                             <input type="text" class="form-control" id="nombre" required>
@@ -223,12 +223,15 @@
                             <input type="checkbox" class="form-control" id="principal">
                         </div>
 
+                        <div class="col-md-4 mx-auto">
+                            <input type="submit" value="Registrar Plan">
+                        </div>
+
+
+
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-danger" onclick="guardarPlan();">Guardar Plan</button>
-                </div>
+
             </div>
         </div>
     </div>
@@ -246,7 +249,7 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="form-group">
+                        <div class="form-group" onsubmit="return editarPlan();">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
                             <input type="text" class="form-control" id="nombre2" required>
                         </div>
@@ -279,11 +282,13 @@
                             <input type="checkbox" class="form-control" id="principal2">
                         </div>
 
+                        <div class="col-md-4 mx-auto">
+                            <input type="submit" value="Editar Plan">
+                        </div>
+
                     </form>
                 </div>
-                <div class="modal-footer" id="botones">
 
-                </div>
             </div>
         </div>
     </div>
