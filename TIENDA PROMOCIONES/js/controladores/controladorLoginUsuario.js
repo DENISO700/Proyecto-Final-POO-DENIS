@@ -1914,8 +1914,6 @@ if (localStorage.getItem("empresas") == null) {
 //FUNCIONES LOGIN USUARIO
 
 function campoVacio() {
-
-
     valor = document.getElementById("correo").value;
     valor2 = document.getElementById("contraseña").value;
     if (valor == null || valor.length == 0 || /^\s+$/.test(valor) || valor2 == null || valor2.length == 0 || /^\s+$/.test(valor2)) {
@@ -1924,13 +1922,7 @@ function campoVacio() {
     } else {
         Admin();
     }
-
-
-
-
-
 }
-
 
 function Admin() {
     var temp = document.getElementById('correo').value;
@@ -1951,12 +1943,7 @@ function Admin() {
 
             break;
         }
-
-
-
-
     }
-
 
 }
 

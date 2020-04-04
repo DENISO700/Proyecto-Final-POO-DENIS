@@ -2176,24 +2176,18 @@ function Editar(r) {
     document.getElementById("ayuda2").value = planes[r].centroDeAyuda
     document.getElementById("duracion2").value = planes[r].duracion
     document.getElementById("principal2").value = planes[r].panpallaPrincipal
-
     document.getElementById("botones").innerHTML =
         `
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
     <button type="button" class="btn btn-danger" onclick=" editarPlan(${r})">Guardar Plan</button>
-    
-    `
-
+        `
 }
 
 ///FUNCION EDITAR PLAN
 
 function editarPlan(m) {
 
-
     let editado = {
-
-
         nombrePlan: document.getElementById("nombre2").value,
         precio: document.getElementById("precio2").value,
         promos: document.getElementById("promos2").value,
@@ -2202,10 +2196,6 @@ function editarPlan(m) {
         centroDeAyuda: document.getElementById("ayuda2").value,
         duracion: document.getElementById("duracion2").value,
         panpallaPrincipal: document.getElementById("principal2").value,
-
-
-
-
     };
     planes.splice(m, 1, editado)
         // planes.push(editado);
