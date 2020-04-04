@@ -29,8 +29,6 @@ function selectNoVacio() {
 
 }
 
-
-
 ///////////////////////////////////////////////////////////////////////////////
 
 //VALIDAR IDENTIFICADOR UNICO /////
@@ -48,8 +46,6 @@ function idUnico() {
     }
 
 }
-
-
 //////////////////////////////////////////////////////////////////////////
 ////////////////VALIDAR QUE UN CHECKBOX SEA SELECCIONADO /////
 
@@ -220,9 +216,9 @@ function validarEmpresa() {
 
 ////////////////////////////////////////
 
-//VALIDACIONES REGISTRO PRODUCTO 
+//VALIDACIONES REGISTRO PROMOCION 
 
-function validarProducto() {
+function validarPromocion() {
 
     var inicio = document.getElementById("fechainicio").value;
     var final = document.getElementById("fechalimite").value;
@@ -285,6 +281,41 @@ function validarSucursal() {
 }
 
 //////////////////////////////
+
+
+function validarProducto() {
+
+    var categoria = document.getElementById('categorias').value;
+    var nombre = document.getElementById('nombreProducto').value;
+    var precio = document.getElementById('precioproducto').value;
+    var cantida = document.getElementById('cantidad').value;
+    var descripcion = document.getElementById('descripcion').value;
+
+
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    var regex3 = /^(ftp|http|https):\/\/[^ "]+$/;
+
+    var regex4 = /^\d*\.?\d*$/;
+
+
+
+    if (nombreProducto.length > 20) {
+        alert("Nombre Demasiado Largo");
+        return false;
+    } else if (descripcion.length > 100 || descripcion.length < 10) {
+        alert("Descripcion demasiado larga");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        nuevoProducto();
+        return true
+    }
+
+
+}
+
+//////////////////////////////
 function esNum(ev, el) {
     /* ev: evento; el: elemento; */
     tecla = (document.all) ? ev.keyCode : ev.which;
@@ -308,3 +339,67 @@ function esNum(ev, el) {
 }
 
 //////////////////////////////////////////////////////////////
+
+function validarPlan() {
+
+    var nombrePlan = document.getElementById("nombre").value;
+    var precio = document.getElementById("precio").value;
+    var promos = document.getElementById("promos").value;
+    var almacenamiento = document.getElementById("almacenamiento").value;
+    var soporte = document.getElementById("soporte").value;
+    var centroDeAyuda = document.getElementById("ayuda").value;
+    var duracion = document.getElementById("duracion").value;
+    var panpallaPrincipal = document.getElementById("principal").value;
+
+
+
+    var regex2 = /^([0-9])$/;
+
+    var regex3 = /^(ftp|http|https):\/\/[^ "]+$/;
+
+    var regex4 = /^\d{2}\/\d{2}$/;
+
+    if (nombrePlan.length > 15) {
+        alert("Nombre Demasiado Largo");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        guardarPlan();
+        return true
+    }
+
+
+}
+
+//////////////////////////////////////////////////////////////////
+
+function editarPlan() {
+
+    var nombrePlan = document.getElementById("nombre2").value;
+    var precio = document.getElementById("precio2").value;
+    var promos = document.getElementById("promos2").value;
+    var almacenamiento = document.getElementById("almacenamiento2").value;
+    var soporte = document.getElementById("soporte2").value;
+    var centroDeAyuda = document.getElementById("ayuda2").value;
+    var duracion = document.getElementById("duracion2").value;
+    var panpallaPrincipal = document.getElementById("principal2").value;
+
+
+
+    var regex2 = /^([0-9])$/;
+
+    var regex3 = /^(ftp|http|https):\/\/[^ "]+$/;
+
+    var regex4 = /^\d{2}\/\d{2}$/;
+
+    if (nombrePlan.length > 15) {
+        alert("Nombre Demasiado Largo");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        guardarPlan();
+        return true
+    }
+
+
+}
