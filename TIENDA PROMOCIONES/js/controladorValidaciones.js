@@ -29,8 +29,6 @@ function selectNoVacio() {
 
 }
 
-
-
 ///////////////////////////////////////////////////////////////////////////////
 
 //VALIDAR IDENTIFICADOR UNICO /////
@@ -48,8 +46,6 @@ function idUnico() {
     }
 
 }
-
-
 //////////////////////////////////////////////////////////////////////////
 ////////////////VALIDAR QUE UN CHECKBOX SEA SELECCIONADO /////
 
@@ -343,3 +339,63 @@ function esNum(ev, el) {
 }
 
 //////////////////////////////////////////////////////////////
+
+function validarPlan() {
+
+    var nombrePlan = document.getElementById("nombre").value;
+    var precio = document.getElementById("precio").value;
+    var promos = document.getElementById("promos").value;
+    var almacenamiento = document.getElementById("almacenamiento").value;
+    var soporte = document.getElementById("soporte").value;
+    var centroDeAyuda = document.getElementById("ayuda").value;
+    var duracion = document.getElementById("duracion").value;
+    var panpallaPrincipal = document.getElementById("principal").value;
+
+
+
+    var regex2 = /^([0-9])$/;
+
+    var regex3 = /^(ftp|http|https):\/\/[^ "]+$/;
+
+    var regex4 = /^\d{2}\/\d{2}$/;
+
+    if (nombrePlan.length > 15) {
+        alert("Nombre Demasiado Largo");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        guardarPlan();
+        return true
+    }
+
+
+}
+
+//////////////////////////////////////////////////////////////////
+
+function editarPlan() {
+
+    var nombrePlan = document.getElementById("nombre2").value;
+    var precio = document.getElementById("precio2").value;
+    var promos = document.getElementById("promos2").value;
+    var almacenamiento = document.getElementById("almacenamiento2").value;
+    var soporte = document.getElementById("soporte2").value;
+    var centroDeAyuda = document.getElementById("ayuda2").value;
+    var duracion = document.getElementById("duracion2").value;
+    var panpallaPrincipal = document.getElementById("principal2").value;
+
+    var regex2 = /^([0-9])$/;
+    var regex3 = /^(ftp|http|https):\/\/[^ "]+$/;
+    var regex4 = /^\d{2}\/\d{2}$/;
+
+    if (nombrePlan.length > 15) {
+        alert("Nombre Demasiado Largo");
+        return false;
+    } else {
+        alert("Datos Correctos");
+        guardarPlan();
+        return true
+    }
+
+
+}
