@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impresion</title>
+
+    <!-- Font Awesome CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- CABEZERA -->
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootsnav pt-5">
+            <div class="container" id="cabezera">
+
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+                    <a class="navbar-brand" href="#"><img src="/images/logotipo.png" class="logo d-sm-none d-none d-md-block"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+
+                        <li class="nav-item"><a class="nav-link" href="/dashboard1.html"><i class="fa fa-undo" ></i>&nbsp;&nbsp;Regresar</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+    <!-- FIN CABEZERA -->
+
+    <!--  MARCADOR -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Fichas de Impresion</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MARCADOR -->
+
+
+    <!--  FORMULARIO -->
+    <form id="formulario-empresa">
+        <div class="row formulario">
+            <div class="col-md-9  col-12 contenido shadow p-3 mb-5 bg-light rounded m-auto">
+                <h2 class="text-center">Datos de la Promocion</h2>
+                <hr>
+
+                <!-- Datos Generales -->
+                <div class="row">
+                    <div class=" col-md-5 mb-3 mt-5">
+                        <input class="form-control" type="text" placeholder="Nombre del Producto" required>
+                    </div>
+                    <div class="col-md-5 mb-3 mt-5">
+                        <button type="button" class="btn btn-danger">Buscar</button>
+
+                    </div>
+                </div>
+                <!-- Fin  -->
+
+
+    </form>
+    <!-- FIN FORMULARIO -->
+
+
+    <!-- FICHA -->
+    <div class="canvas_div_pdf">
+
+        <div class="container col-md-8 mt-5">
+
+            <div class="row">
+
+                <div class="col-md-6">
+                    <h1>Ficha de Promocion</h1>
+                </div>
+
+                <div class="col-md-6 ml-auto">
+                    <span class="descuento">50%</span>
+                </div>
+            </div>
+
+            <div class="row" style="background-color: wheat;">
+
+                <div id="beauty" class="col-md-4">
+                    <h2>Codigo QR</h2>
+                    <img src="/images/QR.png" width="123" height="123" /><br><br>
+                    <button type="button" class="btn btn-danger" onclick="getPDF()">Generar PDF</button>
+                </div>
+
+                <div class="main col-md-4">
+                    <h2>Nombre del Producto</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum at beatae recusandae aperiam sed, et unde alias officiis dolores, eius numquam! Alias obcaecati, sequi exercitationem mollitia amet harum nam ullam quaerat at et
+                    </p>
+                </div>
+
+                <div class="main2 col-md-4">
+                    <h2>Foto Producto</h2>
+
+                    <img src="/images/logotipo.png" width="100" height="100" />
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- FIN FICHA -->
+
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+
+
+</body>
+<!-- ALL JS FILES -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ALL PLUGINS -->
+<script src="js/jquery.superslides.min.js"></script>
+<script src="/js/custom.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
+
+
+
+<script>
+    function getPDF() {
+
+        var HTML_Width = $(".canvas_div_pdf").width();
+        var HTML_Height = $(".canvas_div_pdf").height();
+        var top_left_margin = 15;
+        var PDF_Width = HTML_Width;
+        var PDF_Height = (PDF_Width * 1);
+        var canvas_image_width = HTML_Width;
+        var canvas_image_height = HTML_Height;
+
+        var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+
+        html2canvas($(".canvas_div_pdf")[0], {
+            allowTaint: true
+        }).then(function(canvas) {
+            canvas.getContext('2d');
+
+            var imgData = canvas.toDataURL("image/jpeg", 1.0);
+            var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+            pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+
+
+            for (var i = 1; i <= totalPDFPages; i++) {
+                pdf.addPage(PDF_Width, PDF_Height);
+                pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i), canvas_image_width, canvas_image_height);
+            }
+
+            pdf.save("FichaPromocion.pdf");
+        });
+    };
+</script>
+
+</html>
